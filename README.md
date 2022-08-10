@@ -1,15 +1,24 @@
 # learning-rust
 repo which is used to learn rust
 
+## General
+
+* in rust it is common to structure a program around the data they handle
+
 ## Compiling & Executing
 
 * `rustc` compiles the `main.rs` to an executable binary 
 * `rustc` is suited for simple programs
+* `cargo` is the build system and package manager of rust
+  * builds code
+  * downloads libraries
+  * building those libraries
 * to manage options and dependecies `cargo` is better suited than `rustc`
-
-## General
-
-* in rust it is common to structure a program around the data they handle
+* dependencies are handled in a `Cargo.toml` file
+  * `[package]` handles name, version and edtion
+  * edtion indicated the rust language version
+  * `[dependencies]` list the project dependencies
+* packages in rust are called `crates`
 
 ## Syntax 
 
