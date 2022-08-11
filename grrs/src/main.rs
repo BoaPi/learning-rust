@@ -17,4 +17,13 @@ fn main() {
 
     println!("{}", args.pattern);
     println!("{}",  args.path.display());
+
+    /// read file from given path
+    let content = std::fs::read_to_string(&args.path)
+        .expect("could not read file");
+
+    /// print each line of file
+    for line in content.lines() {
+        println!("{}", line);
+    }
 }
