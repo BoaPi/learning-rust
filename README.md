@@ -32,4 +32,7 @@ repo which is used to learn rust
 ## Packages
 
 * `PathBuf` from `std::path` is also a string, but for file system paths an works cross-platform
+* `std::fs::read_to_string` will read fill to a value
+* calling `.lines()` on the return value of `std::fs::read_to_string` will give me an iterable value, where each index is a line
+
 
