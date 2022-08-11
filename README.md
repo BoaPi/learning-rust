@@ -27,6 +27,7 @@ repo which is used to learn rust
 * `println!` calls a rust macro, this is marked by the `!` at the end, if the `!` would be missing, it would be a functuin call
 * a semicolon `;` end an expression in rust
 * `("{}")` is used to print a variable
+* `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 
 ## Packages
 
