@@ -22,14 +22,18 @@ fn main() {
     let input = File::open(&args.path);
 
     // check if the file was able to be read
+    // and unwrap it alread
+    // panic out if not found
     let content = match input {
-        Ok(ref content) => { content }, 
-        Err(ref error) => { panic!("Oh noes: {}", error); }
+        Ok(ref content) => content,
+        Err(ref error) => {
+            panic!("Oh noes: {}", error);
+        }
     };
-    
-    println!("File content: {:?}", content);
-    
-    let reader = BufReader::new(input.unwrap());
+
+    println!("File content:\n {:?}", content);
+
+    let reader = BufReader::new(content);
 
     // print each line of file which contains the pattern
     let mut check: String;
