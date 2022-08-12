@@ -1,9 +1,7 @@
-#![allow(unused)]
-
 use clap::Parser;
+use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
-use std::fs::File;
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(Parser)]
@@ -21,17 +19,23 @@ fn main() {
     println!("{}", args.pattern);
     println!("{}", args.path.display());
 
-    /// read file from given path
-    /// let content = std::fs::read_to_string(&args.path).expect("could not read file");
-    let f = File::open(&args.path);
-    let mut reader = BufReader::new(f);
+    // read file from given path
+    let input = File::open(&args.path).unwrap();
+    let reader = BufReader::new(input);
 
-    let content = reader.read();
+    // print each line of file
+    let mut check = String::new();
 
-    /// print each line of file
-    for line in content.lines() {
-        if line.contains(&args.pattern) {
-            println!("{}", line);
+    for line in reader.lines() {
+        // check = line.unwrap();
+        update_check(&mut check, line.unwrap());
+
+        if check.contains(&args.pattern) {
+            println!("{}", check);
         }
     }
+}
+
+fn update_check(current_check: &mut String, new_check: String) {
+    *current_check = new_check;
 }
