@@ -4,6 +4,10 @@ repo which is used to learn rust
 ## General
 
 * in rust it is common to structure a program around the data they handle
+* rust do NOT have exceptions
+* all error states are often encoded in the return type
+* rust brings in a set of items defined in the standard library, that is in scope of every program, this is called `prelude`
+* if a type is not part of the `prelude`, we need to bring it in scope explicit with a `use`statement
 
 ## Compiling & Executing
 
@@ -33,6 +37,9 @@ repo which is used to learn rust
 * `("{}")` is used to print a variable
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
+* a `File::open()` not a string, it returns a `Result`
+* a `Result` in this case, contains a `String` and an `Error`
+* a `Result` is an `enum`
 
 ## Packages
 
