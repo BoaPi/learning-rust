@@ -23,19 +23,14 @@ fn main() {
     let input = File::open(&args.path).unwrap();
     let reader = BufReader::new(input);
 
-    // print each line of file
-    let mut check = String::new();
+    // print each line of file which contains the pattern
+    let mut check: String;
 
     for line in reader.lines() {
-        // check = line.unwrap();
-        update_check(&mut check, line.unwrap());
+        check = line.unwrap();
 
         if check.contains(&args.pattern) {
             println!("{}", check);
         }
     }
-}
-
-fn update_check(current_check: &mut String, new_check: String) {
-    *current_check = new_check;
 }
