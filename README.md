@@ -22,12 +22,17 @@ repo which is used to learn rust
 
 ## Syntax 
 
+* `!#[allow(unused)]` allows unused variables in code, should only be used in for development
 * `fn main() {}` is always the first function that runs in every executable rust programm
 * indentation is always 4 `spaces` not `tabs`
 * `println!` calls a rust macro, this is marked by the `!` at the end, if the `!` would be missing, it would be a functuin call
 * a semicolon `;` end an expression in rust
 * `("{}")` is used to print a variable
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
+* variables are defined with `let`
+* variables are unmutable by default
+* to get a mutable variable it needs to be declared as so: `let mut <name-of-variable>`
+* `String.trim_end()` removes trailign whitespaces
 
 ## Packages
 
