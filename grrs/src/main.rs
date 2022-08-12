@@ -22,11 +22,13 @@ fn main() {
     let input = File::open(&args.path);
 
     // check if the file was able to be read
-    match input {
-        Ok(ref content) => { println!("File: {:?}", content); }
-        Err(ref error) => { println!("Oh noes: {}", error); }
-    }
-
+    let content = match input {
+        Ok(ref content) => { content }, 
+        Err(ref error) => { panic!("Oh noes: {}", error); }
+    };
+    
+    println!("File content: {:?}", content);
+    
     let reader = BufReader::new(input.unwrap());
 
     // print each line of file which contains the pattern
