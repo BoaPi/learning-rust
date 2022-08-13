@@ -12,7 +12,7 @@ struct Cli {
     path: std::path::PathBuf,
 }
 
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Cli::parse();
 
     println!("{}", args.pattern);
@@ -25,9 +25,9 @@ fn main() {
     // and unwrap it alread
     // panic out if not found
     let content = match input {
-        Ok(ref content) => content,
-        Err(ref error) => {
-            panic!("Oh noes: {}", error);
+        Ok(content) => content,
+        Err(error) => {
+            return Err(error.into());
         }
     };
 
@@ -45,4 +45,7 @@ fn main() {
             println!("{}", check);
         }
     }
+
+    // return at last
+    Ok(())
 }
