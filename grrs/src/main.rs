@@ -23,7 +23,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // check if the file was able to be read
     // and unwrap it alread
-    // panic out if not found
+    // throw error in Err case
     let content = match input {
         Ok(content) => content,
         Err(error) => {
