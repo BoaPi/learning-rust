@@ -37,9 +37,14 @@ repo which is used to learn rust
 * `("{}")` is used to print a variable
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
+
+### Reading from files
+
 * a `File::open()` not a string, it returns a `Result`
 * a `Result` in this case, contains a `String` and an `Error`
 * a `Result` is an `enum`
+* to handle the enum variants, we can use `match`
+* `unwrap()` is the shortcut method to do the same
 
 ## Packages
 
