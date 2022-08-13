@@ -80,6 +80,12 @@ repo which is used to learn rust
 * `Pointer` is a address to a memory location
 * `Box<T>` is the most straigforward smart pointer
 * a `Box<T>` smart pointer stores data on the `heap`instead of the `stack`
+* `Boxes` do not have a performance overhead, but also do not have extra caüabilities
+* common uses cases are:
+  * a type with an unknown size at compile time and a value of that type should be used
+  in a context which requires an exact size
+  * when a value should be owned, where it is only needed to know that
+  a certain trait is implemented, rahter than a specific type
 
 ## Packages
 
