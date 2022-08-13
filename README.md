@@ -9,6 +9,35 @@ repo which is used to learn rust
 * rust brings in a set of items defined in the standard library, that is in scope of every program, this is called `prelude`
 * if a type is not part of the `prelude`, we need to bring it in scope explicit with a `use`statement
 
+### Heap & Stack
+
+* most programming languages do not require to think of `heap`and `stack`
+* both are part of the memory that is available to the code
+* when a function is called, the values which are passed to the function (including also pointer to data on the `heap`)
+  and local variables get pushed into the `stack` and will be popped out 
+  when the functiuon is over
+
+#### Stack
+
+* stores data in the order it gets them
+* removes the data in the opposite order
+* `LIFO` - last in first out principle
+* add data to the stack is called **pushing onto the stack**
+* removing data from the stack is called **popping off the stack**
+* all data stored in the stack must have a known size
+* data with unknown size at compile time needs to be stored in the `heap`
+* pishing to the `stack`is fast, because the allocator does not to search for a spot
+
+#### Heap
+
+* is less organized than the `stack`
+* when data is put into the `heap`, a certain amount of memory is requested
+* the memory allocator finds an empty spot, marks it as `in use` and returns a pointer to the data
+* the process is called **allocating on the heap**
+* because the pointer to the `heap` is a knwon size, it will be stored on the `stack`
+* to get the actual data, the pointer needs to be followed into the `heap`
+* accessing data in the `heap` is slower than in data in the `stack`, because the pointer needs to be followed
+
 ## Compiling & Executing
 
 * `rustc` compiles the `main.rs` to an executable binary 
@@ -45,6 +74,12 @@ repo which is used to learn rust
 * a `Result` is an `enum`
 * to handle the enum variants, we can use `match`
 * `unwrap()` is the shortcut method to do the same
+
+### Smart-Pointer
+
+* `Pointer` is a address to a memory location
+* `Box<T>` is the most straigforward smart pointer
+* a `Box<T>` smart pointer stores data on the `heap`instead of the `stack`
 
 ## Packages
 
