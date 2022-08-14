@@ -74,6 +74,10 @@ repo which is used to learn rust
 * a `Result` is an `enum`
 * to handle the enum variants, we can use `match`
 * `unwrap()` is the shortcut method to do the same
+* `unwrap()` combines the `match` and `panic` combination
+* `?` is also a for `match`
+* `?` can only be used on functions that returns a `Result`
+* `?` will end up in the already unwrapped result (Ok), or `Err`
 
 ### Smart-Pointer
 
