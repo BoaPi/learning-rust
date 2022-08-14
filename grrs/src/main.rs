@@ -1,3 +1,4 @@
+use anyhow::{Context, Result};
 use clap::Parser;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
@@ -12,10 +13,7 @@ struct Cli {
     path: std::path::PathBuf,
 }
 
-#[derive(Debug)]
-struct CustomError(String);
-
-fn main() -> Result<(), CustomError> {
+fn main() -> Result<()> {
     let args = Cli::parse();
 
     println!("{}", args.pattern);
@@ -25,14 +23,8 @@ fn main() -> Result<(), CustomError> {
     let input = File::open(&args.path);
 
     // check if the file was able to be read
-    // and unwrap it alread
-    // throw error in Err case
-    let content = match input {
-        Ok(content) => content,
-        Err(error) => {
-            return Err(CustomError(format!("File not found")));
-        }
-    };
+    let content =
+        input.with_context(|| format!("could not read file `{}`", &args.path.display()))?;
 
     println!("File content:\n {:?}", content);
 
