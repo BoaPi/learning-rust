@@ -12,7 +12,10 @@ struct Cli {
     path: std::path::PathBuf,
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+#[derive(Debug)]
+struct CustomError(String);
+
+fn main() -> Result<(), CustomError> {
     let args = Cli::parse();
 
     println!("{}", args.pattern);
@@ -27,7 +30,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let content = match input {
         Ok(content) => content,
         Err(error) => {
-            return Err(error.into());
+            return Err(CustomError(format!("File not found")));
         }
     };
 
