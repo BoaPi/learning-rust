@@ -91,10 +91,16 @@ repo which is used to learn rust
   * when a value should be owned, where it is only needed to know that
   a certain trait is implemented, rahter than a specific type
 
+### Enumerations
+
+* is used to define a type by enumerating over its possible varinats
+* is used to encode meaning with data
+
 ## Packages
 
 * `PathBuf` from `std::path` is also a string, but for file system paths an works cross-platform
 * `std::fs::read_to_string` will read fill to a value
 * calling `.lines()` on the return value of `std::fs::read_to_string` will give me an iterable value, where each index is a line
 * the result of `.lines()` is a `String`, which has a `.contains()` method, to check if a string contains a certain pattern
+* `anyhow` is a package to handle errors and to have pretty printing to console
 
