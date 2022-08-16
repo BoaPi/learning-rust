@@ -95,6 +95,10 @@ repo which is used to learn rust
 
 * is used to define a type by enumerating over its possible varinats
 * is used to encode meaning with data
+* it is possible to attach data to an `enum` directly, without using a `struct`
+* each variant of an `enum` becomes a function to construct an instance of the `enum`
+* when assigning data directly eo an `enum`, it is also possible that the variants can have
+  different types and associated data
 
 ## Packages
 
