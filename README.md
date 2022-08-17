@@ -64,6 +64,7 @@ repo which is used to learn rust
 * indentation is always 4 `spaces` not `tabs`
 * `println!` calls a rust macro, this is marked by the `!` at the end, if the `!` would be missing, it would be a functuin call
 * `("{}")` is used to print a variable
+* not all variables can just be printed, therefore we can use the **debug representation**, `{:?}`
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
 
@@ -99,6 +100,12 @@ repo which is used to learn rust
 * each variant of an `enum` becomes a function to construct an instance of the `enum`
 * when assigning data directly eo an `enum`, it is also possible that the variants can have
   different types and associated data
+
+### Output - Debugging & Logging
+
+* by adding `#[derive(Debug)]` enables output for custom types
+* `Debug` trait is usually output that targets **developers**
+* `Display` ttrait is usually output that targets the **user**
 
 ## Packages
 
