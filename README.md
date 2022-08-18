@@ -106,6 +106,9 @@ repo which is used to learn rust
 * by adding `#[derive(Debug)]` enables output for custom types
 * `Debug` trait is usually output that targets **developers**
 * `Display` ttrait is usually output that targets the **user**
+* logging of output of the programm should be done with `stdout` - `println!()`
+* logging of errors should be done with `stderr` - `eprintln!()`
+* 
 
 ## Packages
 
@@ -114,4 +117,5 @@ repo which is used to learn rust
 * calling `.lines()` on the return value of `std::fs::read_to_string` will give me an iterable value, where each index is a line
 * the result of `.lines()` is a `String`, which has a `.contains()` method, to check if a string contains a certain pattern
 * `anyhow` is a package to handle errors and to have pretty printing to console
+* `ansi_term` is a good package to print out raw escaped code
 
