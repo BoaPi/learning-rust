@@ -1,9 +1,11 @@
+// ip address enum examples
 #[derive(Debug)]
 enum IpAddr {
-        V4(u8, u8, u8, u8),
-        V6(String),
-    }
+    V4(u8, u8, u8, u8),
+    V6(String),
+}
 
+// custom method for enum IpAddr
 impl IpAddr {
     fn call(&self) {
         println!("{:?}", self)
