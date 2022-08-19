@@ -100,6 +100,9 @@ repo which is used to learn rust
 * each variant of an `enum` becomes a function to construct an instance of the `enum`
 * when assigning data directly eo an `enum`, it is also possible that the variants can have
   different types and associated data
+* with `impl` it is possible to define `methods` on enums
+* `enums` with different typed variants are better suited to pass into a function, than 
+  the same amont of differents `structs`
 
 ### Output - Debugging & Logging
 
