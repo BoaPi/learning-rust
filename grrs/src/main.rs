@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use clap::Parser;
 use std::fs::File;
-use std::io::{BufRead, BufReader};
+use std::io::{self, BufRead, BufReader, Write};
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(Parser)]
@@ -14,10 +14,13 @@ struct Cli {
 }
 
 fn main() -> Result<()> {
-    let args = Cli::parse();
+    // initialize stdout, locks stdout
+    // and create new BufWriter
+    let stdout = io::stdout();
+    let mut handle = io::BufWriter::new(stdout.lock());
 
-    println!("{}", args.pattern);
-    println!("{}", args.path.display());
+    // get all cli arguments
+    let args = Cli::parse();
 
     // read file from given path
     let input = File::open(&args.path);
@@ -26,7 +29,7 @@ fn main() -> Result<()> {
     let content =
         input.with_context(|| format!("could not read file `{}`", &args.path.display()))?;
 
-    println!("File content:\n {:?}", content);
+    writeln!(handle, "File content:\n {:?}", content)?;
 
     let reader = BufReader::new(content);
 
@@ -37,10 +40,11 @@ fn main() -> Result<()> {
         check = line.unwrap();
 
         if check.contains(&args.pattern) {
-            println!("{}", check);
+            writeln!(handle, "{}", check)?;
         }
     }
 
     // return at last
+    writeln!(handle, "\nSearch of {:?} in file {:?} done", args.pattern, args.path)?;
     Ok(())
 }
