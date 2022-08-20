@@ -111,7 +111,11 @@ repo which is used to learn rust
 * `Display` ttrait is usually output that targets the **user**
 * logging of output of the programm should be done with `stdout` - `println!()`
 * logging of errors should be done with `stderr` - `eprintln!()`
-* 
+* printing to the console is slow, but there are ways to speed things up:
+  1. reduce number of writes that **flush** the terminal. `println!` tells the system to **flush** the terminal everytime.
+  if this is not neccessary the `stdout` can be wrapped in a `BufWriter`
+  2. acquire a lock on `stdout`or `stderr` and use `writeln!` to print directly
+  this prevents the system from locking and unlocking the `stdout` all the time
 
 ## Packages
 
