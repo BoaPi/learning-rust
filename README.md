@@ -117,6 +117,13 @@ repo which is used to learn rust
   2. acquire a lock on `stdout`or `stderr` and use `writeln!` to print directly
   this prevents the system from locking and unlocking the `stdout` all the time
 
+## Testing
+
+* unit test will be in the file, where the units are which should be tested
+* convention is to create a module named `tests` in each file and to annotate it with `cfg(test)`
+* integration test will live externaly to the `src` files in a folder called `tests`
+* integration test will use the code in the same way as other code would do
+
 ## Packages
 
 * `PathBuf` from `std::path` is also a string, but for file system paths an works cross-platform
