@@ -48,3 +48,17 @@ fn main() -> Result<()> {
     writeln!(handle, "\nSearch of {:?} in file {:?} done", args.pattern, args.path)?;
     Ok(())
 }
+
+fn answer() -> i32 {
+    return 42;
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    
+    #[test]
+    fn my_first_unit_test() {
+        assert_eq!(answer(), 42);
+    }
+}
