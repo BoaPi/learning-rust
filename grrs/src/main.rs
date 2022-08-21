@@ -49,9 +49,9 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn answer() -> i32 {
-    return 42;
-}
+fn find_matches(reader, pattern) {
+    
+} 
 
 #[cfg(test)]
 mod tests {
