@@ -125,6 +125,7 @@ repo which is used to learn rust
 * integration test will use the code in the same way as other code would do
 * integration test will live externaly to the `src` files in a folder called `tests`
 * integration test will use the code in the same way as other code would do
+* assertions are done with `assert_eq!` macro
 
 ## Packages
 
