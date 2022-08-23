@@ -33,24 +33,32 @@ fn main() -> Result<()> {
 
     let reader = BufReader::new(content);
 
+    // check reader content for matching pattern
+    let findings: String = find_matches( reader, &args.pattern);
+        
+    // print result
+    writeln!(handle, "{}", findings)?;
+
+    // return at last
+    writeln!(handle, "Search of {:?} in file {:?} done", args.pattern, args.path)?;
+    Ok(())
+}
+
+fn find_matches<R: BufRead>(reader: R, pattern: &str) -> String {
     // print each line of file which contains the pattern
     let mut check: String;
+    let mut result: String = String::from("");
 
     for line in reader.lines() {
         check = line.unwrap();
 
-        if check.contains(&args.pattern) {
-            writeln!(handle, "{}", check)?;
+        if check.contains(pattern) {
+            result.push_str(&check);
+            result.push_str("\n");
         }
     }
 
-    // return at last
-    writeln!(handle, "\nSearch of {:?} in file {:?} done", args.pattern, args.path)?;
-    Ok(())
-}
-
-fn find_matches(reader, pattern) {
-    
+    return result;
 } 
 
 #[cfg(test)]
