@@ -68,6 +68,15 @@ repo which is used to learn rust
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
 
+### Strings
+
+* type `String` is most common and hold the ownership of the content
+  * can be create from a literal string - `String`
+* type `str` is the primitive counterpart of `String`
+  * also calles **string slice**
+  * usually seen in its borrowed form `&str`
+  * always valid **UTF-8**
+
 ### Reading from files
 
 * a `File::open()` not a string, it returns a `Result`
