@@ -22,25 +22,34 @@ fn main() -> Result<()> {
     // get all cli arguments
     let args = Cli::parse();
 
-    // read file from given path
-    let input = File::open(&args.path);
+    // if patten is empty return nothing and skip searching
+    if str::is_empty(&args.pattern) {
+        writeln!(handle, "No pattern provided")?;
+    } else {
+        // read file from given path
+        let input = File::open(&args.path);
 
-    // check if the file was able to be read
-    let content =
-        input.with_context(|| format!("could not read file `{}`", &args.path.display()))?;
+        // check if the file was able to be read
+        let content =
+            input.with_context(|| format!("could not read file `{}`", &args.path.display()))?;
 
-    writeln!(handle, "File content:\n {:?}", content)?;
+        writeln!(handle, "File content:\n {:?}", content)?;
 
-    let reader = BufReader::new(content);
+        let reader = BufReader::new(content);
 
-    // check reader content for matching pattern
-    let findings: String = grrs::find_matches( reader, &args.pattern);
-        
-    // print result
-    writeln!(handle, "{}", findings)?;
+        // check reader content for matching pattern
+        let findings: String = grrs::find_matches(reader, &args.pattern);
 
-    // return at last
-    writeln!(handle, "Search of {:?} in file {:?} done", args.pattern, args.path)?;
+        // print result
+        writeln!(handle, "{}", findings)?;
+
+        // return at last
+        writeln!(
+            handle,
+            "Search of {:?} in file {:?} done",
+            args.pattern, args.path
+        )?;
+    };
+
     Ok(())
 }
-
