@@ -28,3 +28,15 @@ fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
+
+#[test]
+fn handle_empty_pattern() -> Result<(), Box<dyn std::error::Error>> {
+    let mut cmd = Command::cargo_bin("grrs")?;
+
+    cmd.arg("").arg("some/test/file");
+    cmd.assert()
+        .success()
+        .stdout(predicate::str::contains("No pattern provided"));
+
+    Ok(())
+}
