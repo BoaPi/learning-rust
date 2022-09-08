@@ -142,4 +142,8 @@ repo which is used to learn rust
 * the result of `.lines()` is a `String`, which has a `.contains()` method, to check if a string contains a certain pattern
 * `anyhow` is a package to handle errors and to have pretty printing to console
 * `ansi_term` is a good package to print out raw escaped code
+* `assert_cmd` adds methods on *command*
+* `assert_fs` is usefule to generate temporary test files
+* `predicates` assertion library
+* `std:process:Command` is used to run the binary
 
