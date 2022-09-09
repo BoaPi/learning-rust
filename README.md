@@ -156,6 +156,11 @@ repo which is used to learn rust
 * publishing with **cargo**
   * with **cargo** all external dependecies will get downloaded from **cartes.io**
   * `cargo publish` will publish the crate to **crates.io**
+  * `cargo.toml` should include all necessary fields for publishing on **crates.io**
+  * e.g.: name, version, authors, license, description, readme, homepage, repo, keywords, categories
+  * to install a package from **crates.io** `cargo install <crate-name>` should be used
+  * user of the tool need to have rust installed to compile from source and use the programm
+  * should mainly be used for crates which targets other rust developers
 * distributing binaries
   * 
 * getting the app into a package registry
