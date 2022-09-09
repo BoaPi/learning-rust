@@ -150,3 +150,13 @@ repo which is used to learn rust
 * `predicates` assertion library
 * `std:process:Command` is used to run the binary
 
+## Packaging and Distributing
+
+* three ways to package and release a programm
+* publishing with **cargo**
+  * with **cargo** all external dependecies will get downloaded from **cartes.io**
+  * `cargo publish` will publish the crate to **crates.io**
+* distributing binaries
+  * 
+* getting the app into a package registry
+  * 
