@@ -133,6 +133,9 @@ repo which is used to learn rust
 * integration test will live externaly to the `src` files in a folder called `tests`
 * integration test will use the code in the same way as other code would do
 * assertions are done with `assert_eq!` macro
+* write integration tests for every behavior a user can encounter
+* integrations test should not cover all edge cases, lean on unit tests for that
+* do **not** test what you can not controll
 
 ## Packages
 
