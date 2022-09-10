@@ -162,6 +162,13 @@ repo which is used to learn rust
   * user of the tool need to have rust installed to compile from source and use the programm
   * should mainly be used for crates which targets other rust developers
 * distributing binaries
-  * **tbd**
+  * `cargo build` will generate binaries
+  * generates one file, that can be used by users with the same OS
+  * no need for `rust` to be installed
+  * no need for compilation
+  * different OS needs different builds and binaries
 * getting the app into a package registry
-  * **tbd**
+  * usually no think about how to install the tool
+  * package managers provides update mechanics
+  * but each OS has there own package managers
+* for starters, first use `cargo install`, than binaries and at last package managers
