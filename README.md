@@ -162,6 +162,6 @@ repo which is used to learn rust
   * user of the tool need to have rust installed to compile from source and use the programm
   * should mainly be used for crates which targets other rust developers
 * distributing binaries
-  * 
+  * **tbd**
 * getting the app into a package registry
-  * 
+  * **tbd**
