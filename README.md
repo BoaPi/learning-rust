@@ -9,6 +9,10 @@ repo which is used to learn rust
 * rust brings in a set of items defined in the standard library, that is in scope of every program, this is called `prelude`
 * if a type is not part of the `prelude`, we need to bring it in scope explicit with a `use`statement
 
+## Standard libraries
+
+* to obtain user input and write output we need the `io` standard lib
+
 ### Heap & Stack
 
 * most programming languages do not require to think of `heap`and `stack`
