@@ -8,6 +8,11 @@ repo which is used to learn rust
 * all error states are often encoded in the return type
 * rust brings in a set of items defined in the standard library, that is in scope of every program, this is called `prelude`
 * if a type is not part of the `prelude`, we need to bring it in scope explicit with a `use`statement
+* `{}` contains the content of a function
+* in rust variables are immutable by **default**
+* once given a value, a value of a variable won't change
+* to make a variable mutable, the `mut` keyword needs to be used
+* `//` marks comments until end of line
 
 ## Standard libraries
 
