@@ -81,6 +81,7 @@ repo which is used to learn rust
 
 * type `String` is most common and hold the ownership of the content
   * can be create from a literal string - `String`
+  * `String::new` is used to create a new instance of `String`, which is empty
 * type `str` is the primitive counterpart of `String`
   * also calles **string slice**
   * usually seen in its borrowed form `&str`
