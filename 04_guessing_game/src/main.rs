@@ -4,10 +4,9 @@ fn main() {
     // greetings for the user
     greeting();
 
-    // create mutuable variable for the user guess
-    let mut guess: String = String::new();
-
-    process_input(&mut guess);
+    // create variable for the user guess
+    let guess: String;
+    guess = process_input();
 
     println!("You guessed: {guess}");
 }
