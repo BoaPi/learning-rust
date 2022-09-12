@@ -21,8 +21,11 @@ fn greeting() {
 
 // function to process the user input
 // and writes input into guess variable
-fn process_input(guess: &mut String) {
+fn process_input() -> String {
+    let mut guess: String = String::new();
     io::stdin()
-        .read_line(guess)
+        .read_line(&mut guess)
         .expect("Failed to read line");
+
+    guess
 }
