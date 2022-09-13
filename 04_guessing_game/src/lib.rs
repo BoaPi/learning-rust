@@ -7,13 +7,21 @@ pub fn greeting() {
     println!("Please input your guess");
 }
 
+// enum for return type og process_input function
+#[derive(Debug)]
+pub enum UserInput {
+    String(String),
+    Number(i32),
+    Float(f32),
+}
+
 // function to process the user input
 // and writes input into guess variable
-pub fn process_input() -> String {
+pub fn process_input() -> UserInput {
     let mut guess: String = String::new();
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-    guess
+    UserInput::String(String::from(guess))
 }
