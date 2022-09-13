@@ -79,6 +79,16 @@ repo which is used to learn rust
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
 
+### IO
+
+* `io::stdin()` is a function to receive user input
+* `io::stdin()` returns an instance of `std::io::Stdin`, which is a type that represents a handle to the standard input
+* `read_line()` is a method of an instance of `std::io::Stdin` handle
+* `read_line()` receives a reference to a mutable variable to store the `string` in
+* `read_line()` returns a **Result** with 2 possible variants
+  * **Ok** - operation was successful
+  * **Err** - operation was failed
+
 ### Strings
 
 * type `String` is most common and hold the ownership of the content
