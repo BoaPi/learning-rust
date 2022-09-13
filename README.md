@@ -18,6 +18,7 @@ repo which is used to learn rust
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
+* to use `io` it needs to be imported via `std:io`
 
 ### Heap & Stack
 
