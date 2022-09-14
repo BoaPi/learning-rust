@@ -3,8 +3,13 @@ fn main() {
     guessing_game::greeting();
 
     // create variable for the user guess
-    let guess: guessing_game::UserInput;
+    let guess: Result<guessing_game::UserInput, String>;
+
+    // guess will be one of three variants
     guess = guessing_game::process_input();
 
-    println!("You guessed: {:?}", guess);
+    match guess {
+        Ok(value) => println!("your guess is {:?}", value),
+        Err(error) => println!("ERROR: {:?}", error),
+    }
 }
