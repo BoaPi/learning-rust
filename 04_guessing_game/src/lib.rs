@@ -17,11 +17,16 @@ pub enum UserInput {
 
 // function to process the user input
 // and writes input into guess variable
-pub fn process_input() -> UserInput {
+pub fn process_input() -> Result<UserInput, String> {
     let mut guess: String = String::new();
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-    UserInput::String(String::from(guess))
+    if &guess.chars().count() < &2 {
+        return Err("No guess given".to_string());
+    } else {
+        println!("{:?}", &guess.chars().count());
+        return Ok(UserInput::String(String::from(guess)));
+    }
 }
