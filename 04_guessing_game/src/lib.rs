@@ -25,9 +25,8 @@ pub fn process_input() -> Result<UserInput, String> {
 
     // if guess is empty return Err
     if &guess.chars().count() < &2 {
-        return Err("No guess given".to_string());
+        Err("No guess given".to_string())
     } else {
-        println!("{:?}", &guess.chars().count());
-        return Ok(UserInput::Text(String::from(guess)));
+        Ok(UserInput::Text(String::from(guess)))
     }
 }
