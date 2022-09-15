@@ -10,9 +10,9 @@ pub fn greeting() {
 // enum for return type og process_input function
 #[derive(Debug)]
 pub enum UserInput {
-    String(String),
-    Number(i32),
-    Float(f32),
+    Text(String),
+    SimpleNumber(i32),
+    FancyNumber(f32),
 }
 
 // function to process the user input
@@ -27,6 +27,6 @@ pub fn process_input() -> Result<UserInput, String> {
         return Err("No guess given".to_string());
     } else {
         println!("{:?}", &guess.chars().count());
-        return Ok(UserInput::String(String::from(guess)));
+        return Ok(UserInput::Text(String::from(guess)));
     }
 }
