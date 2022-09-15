@@ -7,17 +7,9 @@ pub fn greeting() {
     println!("Please input your guess");
 }
 
-// enum for return type og process_input function
-#[derive(Debug)]
-pub enum UserInput {
-    Text(String),
-    SimpleNumber(i32),
-    FancyNumber(f32),
-}
-
 // function to process the user input
 // and writes input into guess variable
-pub fn process_input() -> Result<UserInput, String> {
+pub fn process_input() -> Result<String, String> {
     let mut guess: String = String::new();
     io::stdin()
         .read_line(&mut guess)
@@ -27,6 +19,6 @@ pub fn process_input() -> Result<UserInput, String> {
     if &guess.chars().count() < &2 {
         Err("No guess given".to_string())
     } else {
-        Ok(UserInput::Text(String::from(guess)))
+        Ok(guess)
     }
 }
