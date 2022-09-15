@@ -139,7 +139,7 @@ repo which is used to learn rust
 
 * by adding `#[derive(Debug)]` enables output for custom types
 * `Debug` trait is usually output that targets **developers**
-* `Display` ttrait is usually output that targets the **user**
+* `Display` trait is usually output that targets the **user**
 * logging of output of the programm should be done with `stdout` - `println!()`
 * logging of errors should be done with `stderr` - `eprintln!()`
 * printing to the console is slow, but there are ways to speed things up:
