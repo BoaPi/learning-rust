@@ -10,6 +10,6 @@ fn main() {
 
     match guess {
         Ok(value) => println!("your guess is {}", value),
-        Err(error) => println!("ERROR: {}", error),
+        Err(error) => eprintln!("ERROR: {}", error),
     }
 }
