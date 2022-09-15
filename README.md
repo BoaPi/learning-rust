@@ -14,6 +14,7 @@ repo which is used to learn rust
 * once given a value, a value of a variable won't change
 * to make a variable mutable, the `mut` keyword needs to be used
 * `//` marks comments until end of line
+* `{}` inside `println!()` are placeholders for variables
 
 ## Standard libraries
 
@@ -88,6 +89,7 @@ repo which is used to learn rust
 * `read_line()` returns a **Result** with 2 possible variants
   * **Ok** - operation was successful
   * **Err** - operation was failed
+  * with `expect()` the error case can be handled, what usually indicates a problem in the underlying OS
 
 ### Strings
 
