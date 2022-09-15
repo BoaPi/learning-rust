@@ -23,6 +23,7 @@ pub fn process_input() -> Result<UserInput, String> {
         .read_line(&mut guess)
         .expect("Failed to read line");
 
+    // if guess is empty return Err
     if &guess.chars().count() < &2 {
         return Err("No guess given".to_string());
     } else {
