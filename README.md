@@ -27,6 +27,9 @@ repo which is used to learn rust
 * an external one, is called `library crate`
   * code is intended to used in other programs
   * can't be executed on its own
+* external `library crates` are used to extend the functionality of the program
+* external `library crates` are managed in the `Cargo.toml` file of the project
+* **crates.io** is the site where **crates** gets published
 
 ### Heap & Stack
 
