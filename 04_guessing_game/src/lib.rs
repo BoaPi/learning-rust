@@ -11,17 +11,20 @@ pub fn greeting() {
 
 // function to process the user input
 // and writes input into guess variable
-pub fn process_input() -> Result<String, String> {
+pub fn process_input() -> Result<i32, String> {
     let mut guess: String = String::new();
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-    // if guess is empty return Err
-    if &guess.chars().count() < &2 {
-        Err("No guess given".to_string())
-    } else {
-        Ok(guess)
+    // trim whitespaces and convert back to String
+    let guess_as_integer = guess.trim().parse::<i32>();
+
+    // unpack "parse()" result and convert it to 
+    // result of the function
+    match guess_as_integer {
+        Ok(value) => Ok(value),
+        Err(error) => Err(error.to_string()),
     }
 }
 
