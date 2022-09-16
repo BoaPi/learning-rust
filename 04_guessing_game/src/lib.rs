@@ -5,7 +5,7 @@ use std::io;
 // function which greets the user
 // and explains the user interactions
 pub fn greeting() {
-    println!("Guess the number!");
+    println!("Guess the number between 1 and 10!");
     println!("Please input your guess");
 }
 
@@ -39,6 +39,6 @@ pub fn compare_numbers(guess: i32, secret: i32) -> Result<String, String> {
     match guess.cmp(&secret) {
         Ordering::Less => Err("To Small".to_string()),
         Ordering::Greater => Err("To Big".to_string()),
-        Ordering::Equal => Ok("You Win".to_string()),
+        Ordering::Equal => Ok("You Win!!!".to_string()),
     }
 }
