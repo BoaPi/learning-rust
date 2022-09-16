@@ -21,6 +21,13 @@ repo which is used to learn rust
 * to obtain user input and write output we need the `io` standard lib
 * to use `io` it needs to be imported via `std:io`
 
+## Crates
+
+* an executable is a `binary crate`
+* an external one, is called `library crate`
+  * code is intended to used in other programs
+  * can't be executed on its own
+
 ### Heap & Stack
 
 * most programming languages do not require to think of `heap`and `stack`
@@ -173,6 +180,7 @@ repo which is used to learn rust
 * `assert_fs` is usefule to generate temporary test files
 * `predicates` assertion library
 * `std:process:Command` is used to run the binary
+* `rand` is used to generate random numbers
 
 ## Packaging and Distributing
 
