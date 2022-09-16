@@ -23,3 +23,8 @@ pub fn process_input() -> Result<String, String> {
         Ok(guess)
     }
 }
+
+// generate a random number
+pub fn generate_secret_number() -> i32 {
+    rand::thread_rng().gen_range(1..=10)
+}
