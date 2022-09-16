@@ -40,5 +40,5 @@ pub fn compare_numbers(guess: i32, secret: i32) -> Result<String, String> {
         Ordering::Less => Err("To Small".to_string()),
         Ordering::Greater => Err("To Big".to_string()),
         Ordering::Equal => Ok("You Win".to_string()),
-    } 
+    }
 }
