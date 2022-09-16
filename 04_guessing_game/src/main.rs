@@ -17,7 +17,7 @@ fn main() {
 
            // give hint about the guess
            match guessing_game::compare_numbers(value, secret_number) {
-               Ok(message) => print!("{}", message),
+               Ok(message) => println!("{}", message),
                Err(error) => eprintln!("GUESS WRONG: {}", error),
            }
         },
