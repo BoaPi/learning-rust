@@ -1,4 +1,5 @@
 use std::io;
+use rand::Rng; 
 
 // function which greets the user
 // and explains the user interactions
