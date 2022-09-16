@@ -3,7 +3,7 @@ fn main() {
     guessing_game::greeting();
 
     // create variable for the user guess
-    let guess: Result<String, String>;
+    let guess: Result<i32, String>;
 
     // guess will be one of three variants
     guess = guessing_game::process_input();
