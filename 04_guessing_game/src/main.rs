@@ -8,8 +8,14 @@ fn main() {
     // guess will be one of three variants
     guess = guessing_game::process_input();
 
+    // generate secret number
+    let secret_number = guessing_game::generate_secret_number();
+
     match guess {
-        Ok(value) => println!("your guess is {}", value),
+        Ok(value) => {
+           println!("your guess is {}", value);
+           println!("secret number is {}", secret_number );
+        },
         Err(error) => eprintln!("ERROR: {}", error),
     }
 }
