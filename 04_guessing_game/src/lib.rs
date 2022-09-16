@@ -1,5 +1,6 @@
-use std::io;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 // function which greets the user
 // and explains the user interactions
