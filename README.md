@@ -30,6 +30,9 @@ repo which is used to learn rust
 * external `library crates` are used to extend the functionality of the program
 * external `library crates` are managed in the `Cargo.toml` file of the project
 * **crates.io** is the site where **crates** gets published
+* `Cargo.lock` file is used to pin down every used version of a crate for the project
+* `Cargo.lock` ensures that every build is the same
+* `cargo update` can update dependecies
 
 ### Heap & Stack
 
