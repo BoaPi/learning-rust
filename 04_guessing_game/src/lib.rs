@@ -7,13 +7,15 @@ use std::num::ParseIntError;
 // and explains the user interactions
 pub fn greeting() {
     println!("Guess the number between 1 and 10!");
-    println!("Please input your guess");
 }
 
 // function to process the user input
 // and writes input into guess variable
 pub fn process_input() -> Result<i32, ParseIntError> {
     let mut guess: String = String::new();
+
+    println!("Please input your guess");
+
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
