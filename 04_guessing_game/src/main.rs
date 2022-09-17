@@ -1,9 +1,11 @@
+use std::num::ParseIntError;
+
 fn main() {
     // greetings for the user
     guessing_game::greeting();
 
     // create variable for the user guess
-    let guess: Result<i32, String>;
+    let guess: Result<i32, ParseIntError>;
 
     // guess will be one of three variants
     guess = guessing_game::process_input();
