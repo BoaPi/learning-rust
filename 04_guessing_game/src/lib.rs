@@ -1,6 +1,7 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+use std::num::ParseIntError;
 
 // function which greets the user
 // and explains the user interactions
@@ -11,21 +12,14 @@ pub fn greeting() {
 
 // function to process the user input
 // and writes input into guess variable
-pub fn process_input() -> Result<i32, String> {
+pub fn process_input() -> Result<i32, ParseIntError> {
     let mut guess: String = String::new();
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
     // trim whitespaces and convert back to String
-    let guess_as_integer = guess.trim().parse::<i32>();
-
-    // unpack "parse()" result and convert it to 
-    // result of the function
-    match guess_as_integer {
-        Ok(value) => Ok(value),
-        Err(error) => Err(error.to_string()),
-    }
+    return guess.trim().parse::<i32>();
 }
 
 // generate a random number
