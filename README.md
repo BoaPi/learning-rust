@@ -119,7 +119,7 @@ repo which is used to learn rust
 * a `File::open()` not a string, it returns a `Result`
 * a `Result` in this case, contains a `String` and an `Error`
 * a `Result` is an `enum`
-* to handle the enum variants, we can use `match`
+* to handle the enum variants, also called **arms**, we can use `match`
 * `unwrap()` is the shortcut method to do the same
 * `unwrap()` combines the `match` and `panic` combination
 * `?` is also a for `match`
