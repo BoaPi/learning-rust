@@ -25,6 +25,7 @@ repo which is used to learn rust
 * **shadowing** is scope related
 * **shadowing** is **not** mutability, reassignment only work with `let` keyword
 * after reassignment the variable is immutable again
+* **shadowing** can be used to change the type of a variable, to reuse the name
     
 
 ## Standard libraries
