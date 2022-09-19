@@ -23,6 +23,8 @@ repo which is used to learn rust
 * constants have a naming convention, `NAME_OF_THE_CONSTANT`, all uppercase with underscores betwenn words
 * **shadowing** is the re-declaration of a **immutable** variable 
 * **shadowing** is scope related
+* **shadowing** is **not** mutability, reassignment only work with `let` keyword
+* after reassignment the variable is immutable again
     
 
 ## Standard libraries
