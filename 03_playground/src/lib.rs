@@ -31,3 +31,21 @@ pub fn immutability_lesson() {
     x = 6;
     println!("{}", x);
 }
+
+// how to shadow a variable
+pub fn shadowing_lesson() {
+    // first declaration
+    let x: i32 = 5;
+
+    // first shadowing
+    let x = x + 1;
+
+    // shadowing is also scope related
+    {
+        let x = x * 2;
+        println!("The value of x is {}, in this scope", x);
+    }
+
+    // next println!() is not effected by the scoped shadoing
+    println!("The value of x is {}, uneffected by the former scope", x);
+}
