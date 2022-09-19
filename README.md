@@ -21,6 +21,8 @@ repo which is used to learn rust
 * constants can be declared at any scope
 * constants are only allowed to be an constatn expression, **not** a result of a runtime computation
 * constants have a naming convention, `NAME_OF_THE_CONSTANT`, all uppercase with underscores betwenn words
+* **shadowing** is the re-declaration of a **immutable** variable 
+* **shadowing** is scope related
     
 
 ## Standard libraries
