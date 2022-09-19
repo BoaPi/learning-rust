@@ -15,6 +15,13 @@ repo which is used to learn rust
 * to make a variable mutable, the `mut` keyword needs to be used
 * `//` marks comments until end of line
 * `{}` inside `println!()` are placeholders for variables
+* constants are not allowed to change, they are always immutable
+* constants using the keyword `const`
+* the type of a constant have to be annotated
+* constants can be declared at any scope
+* constants are only allowed to be an constatn expression, **not** a result of a runtime computation
+* constants have a naming convention, `NAME_OF_THE_CONSTANT`, all uppercase with underscores betwenn words
+    
 
 ## Standard libraries
 
