@@ -53,6 +53,7 @@ pub fn shadowing_lesson() {
 pub fn simple_data_type() {
     // type needs to be annotated properly
     // otherwise the compile is not able to know the type at compile time
+    // let guess = "42".parse().expect("Not an integer");
     let guess: i32 = "42".parse().expect("Not an integer");
     print!("Your guess is: {}", guess);
 }
