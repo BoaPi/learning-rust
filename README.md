@@ -27,6 +27,11 @@ repo which is used to learn rust
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
     
+## Data types
+
+* **scalar** and **compound** are a subset of data types
+* **scalar** types are single value types
+* **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
 
 ## Standard libraries
 
