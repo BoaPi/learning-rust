@@ -2,8 +2,8 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
-    playground::custom_enum_lesson();
-    playground::immutability_lesson();
-    playground::shadowing_lesson();
+    custom_enum_lesson();
+    immutability_lesson();
+    shadowing_lesson();
     simple_data_type();
 }
