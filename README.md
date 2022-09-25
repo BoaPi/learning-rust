@@ -42,6 +42,13 @@ repo which is used to learn rust
 * integers can be written in **decimal**, **hex**, **octal**, **binary** or **bit** (u8 only)
 * as a visual separator and ease up reading an `_` can be used, e.g. `1_000`
 
+### FLoating-Point Types
+* 32-bit or 64-bit
+* default is **f64**
+* all floating-point numbers are **signed**
+* **f32** is single-percision float
+* **f64** is double-percision float
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
