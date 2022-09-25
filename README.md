@@ -33,6 +33,15 @@ repo which is used to learn rust
 * **scalar** types are single value types
 * **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
 
+### Integer Types
+
+* 8-bit, 16-bit, 32-bit, 64-bit or 128-bit
+* **signed** or **unsigned**
+* when it is sure that the number always will be positiv, **unsigned** integers can be used
+* **isize** or **usize** indicated dependens on the architecture of the computer the programm is running on
+* integers can be written in **decimal**, **hex**, **octal**, **binary** or **bit** (u8 only)
+* as a visual separator and ease up reading an `_` can be used, e.g. `1_000`
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
