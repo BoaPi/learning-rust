@@ -43,11 +43,16 @@ repo which is used to learn rust
 * as a visual separator and ease up reading an `_` can be used, e.g. `1_000`
 
 ### FLoating-Point Types
+
 * 32-bit or 64-bit
 * default is **f64**
 * all floating-point numbers are **signed**
 * **f32** is single-percision float
 * **f64** is double-percision float
+
+### Numeric operations
+
+* addition, subtraction, multiplication, division and remainder
 
 ## Standard libraries
 
