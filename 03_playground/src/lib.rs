@@ -55,5 +55,30 @@ pub fn simple_data_type() {
     // otherwise the compile is not able to know the type at compile time
     // let guess = "42".parse().expect("Not an integer");
     let guess: i32 = "42".parse().expect("Not an integer");
-    print!("Your guess is: {}", guess);
+    println!("Your guess is: {}", guess);
+}
+
+pub fn basic_numeric_operations() {
+    // addition
+    let sum: u32 = 1 + 5;
+    println!("Sum is: {}", sum);
+
+    // subtraction
+    let difference: f64 = 10.1 - 5.05;
+    println!("Difference is: {}", difference);
+
+    // multiplication
+    let product: i32 = 5 * 12;
+    println!("Product is: {}", product);
+
+    // division
+    let div1: f64 = 125.3 / 40.1;
+    println!("Quotient 1 is: {}", div1);
+
+    let div2: i32 = 2 / 3;
+    println!("Quotient 2 is: {}", div2);
+
+    // remainder
+    let remainder: u8 = 53 % 7;
+    println!("Remainder is: {}", remainder);
 }
