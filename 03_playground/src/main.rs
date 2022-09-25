@@ -6,4 +6,5 @@ fn main() {
     immutability_lesson();
     shadowing_lesson();
     simple_data_type();
+    basic_numeric_operations();
 }
