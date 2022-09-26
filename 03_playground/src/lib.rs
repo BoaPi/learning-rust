@@ -95,3 +95,17 @@ pub fn basic_boolean_lesson() {
 
     println!("t is {:?} - f is {:?}", t, f);
 }
+
+pub fn basic_character_lesson() {
+    // type inherit
+    let c = 'z';
+
+    let z: char = 'Z';
+
+    let party_emoji: char = '🥳';
+
+    println!(
+        "Some chars are lowercase: {}, some uppercase: {} and other are just party: {}",
+        c, z, party_emoji
+    );
+}
