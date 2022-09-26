@@ -85,3 +85,13 @@ pub fn basic_numeric_operations_lesson() {
     let remainder2: f64 = 53.5 % 3.4;
     println!("Remainder 2 is {}", remainder2);
 }
+
+pub fn basic_boolean_lesson() {
+    // type inherit
+    let t = true;
+
+    // explicite anotation
+    let f: bool = false;
+
+    println!("t is {:?} - f is {:?}", t, f);
+}
