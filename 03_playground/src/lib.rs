@@ -58,7 +58,7 @@ pub fn simple_data_type_lesson() {
     println!("Your guess is: {}", guess);
 }
 
-pub fn basic_numeric_operations() {
+pub fn basic_numeric_operations_lesson() {
     // addition
     let sum: u32 = 1 + 5;
     println!("Sum is: {}", sum);
