@@ -79,6 +79,9 @@ pub fn basic_numeric_operations_lesson() {
     println!("Quotient 2 is: {}", div2);
 
     // remainder
-    let remainder: u8 = 53 % 7;
-    println!("Remainder is: {}", remainder);
+    let remainder1: u8 = 53 % 7;
+    println!("Remainder 1 is: {}", remainder1);
+
+    let remainder2: f64 = 53.5 % 3.4;
+    println!("Remainder 2 is {}", remainder2);
 }
