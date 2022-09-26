@@ -59,6 +59,16 @@ repo which is used to learn rust
 * possible states **true** or **false**
 * mainly used in conditionals, e.g. **if** statements
 
+### Character Types
+
+* most primitive **alphabatic** type
+* `char` literals are specified with single quotes, e.g. `let c: char = 'c';`
+* **4 bytes** in size
+* represents a **scalar** unicode value
+* accented letters, Chinese, Japanese, and Korean characters, emoji,
+  and zero-width spaces are all valid char values in Rust
+* range is from `U+0000` to `U+D7FF` and `U+E000` to `U+10FFFF`
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
