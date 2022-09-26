@@ -5,6 +5,7 @@ fn main() {
     custom_enum_lesson();
     immutability_lesson();
     shadowing_lesson();
-    simple_data_type();
-    basic_numeric_operations();
+    simple_data_type_lesson();
+    basic_numeric_operations_lesson();
+    basic_boolean_lesson();
 }
