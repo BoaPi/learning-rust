@@ -8,4 +8,5 @@ fn main() {
     simple_data_type_lesson();
     basic_numeric_operations_lesson();
     basic_boolean_lesson();
+    basic_character_lesson();
 }
