@@ -42,7 +42,7 @@ repo which is used to learn rust
 * integers can be written in **decimal**, **hex**, **octal**, **binary** or **bit** (u8 only)
 * as a visual separator and ease up reading an `_` can be used, e.g. `1_000`
 
-### FLoating-Point Types
+### Floating-Point Types
 
 * 32-bit or 64-bit
 * default is **f64**
