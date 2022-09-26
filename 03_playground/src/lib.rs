@@ -50,7 +50,7 @@ pub fn shadowing_lesson() {
     println!("The value of x is {}, uneffected by the former scope", x);
 }
 
-pub fn simple_data_type() {
+pub fn simple_data_type_lesson() {
     // type needs to be annotated properly
     // otherwise the compile is not able to know the type at compile time
     // let guess = "42".parse().expect("Not an integer");
