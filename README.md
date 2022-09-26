@@ -54,6 +54,11 @@ repo which is used to learn rust
 
 * addition, subtraction, multiplication, division and remainder
 
+### Boolean Types
+
+* possible states **true** or **false**
+* mainly used in conditionals, e.g. **if** statements
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
