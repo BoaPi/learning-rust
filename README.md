@@ -32,6 +32,8 @@ repo which is used to learn rust
 * **scalar** and **compound** are a subset of data types
 * **scalar** types are single value types
 * **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
+* rust hase two **compound** types, `Tuple` and `Array`
+* **compouund** types can hold multiple values
 
 ### Integer Types
 
