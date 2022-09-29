@@ -9,4 +9,5 @@ fn main() {
     basic_numeric_operations_lesson();
     basic_boolean_lesson();
     basic_character_lesson();
+    basic_tuple_lesson();
 }
