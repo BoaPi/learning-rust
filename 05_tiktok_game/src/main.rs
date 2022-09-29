@@ -1,5 +1,5 @@
 mod board;
 
 fn main() {
-    println!("Hello, world!");
+    println!("Hello Multi-TikTok Game");
 }
