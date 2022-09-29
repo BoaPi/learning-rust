@@ -61,6 +61,14 @@ repo which is used to learn rust
 * possible states **true** or **false**
 * mainly used in conditionals, e.g. **if** statements
 
+### Tuple Types
+
+* is used to group a number of values, with a variety of types
+* have fixed length, ones decalred this can not be changed
+* declared comma-separated inside of parentheses
+* each position has a type, types do not have to be the same
+*
+
 ### Character Types
 
 * most primitive **alphabatic** type
