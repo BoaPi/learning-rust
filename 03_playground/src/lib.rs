@@ -109,3 +109,13 @@ pub fn basic_character_lesson() {
         c, z, party_emoji
     );
 }
+
+pub fn basic_tuple_lesson() {
+    let tup: (i32, u16, u8) = (-100, 50, 255);
+
+    // destructuring from a tuple
+    let (x, y, z) = tup;
+
+    println!("Tuple {:?}", tup);
+    println!("Tuple x {}, y {}, z {}", x, y, z);
+}
