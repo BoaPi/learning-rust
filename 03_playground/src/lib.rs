@@ -118,4 +118,7 @@ pub fn basic_tuple_lesson() {
 
     println!("Tuple {:?}", tup);
     println!("Tuple x {}, y {}, z {}", x, y, z);
+
+    let period_access = tup.2;
+    println!("Tuple element #3: {}", period_access);
 }
