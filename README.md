@@ -67,7 +67,10 @@ repo which is used to learn rust
 * have fixed length, ones decalred this can not be changed
 * declared comma-separated inside of parentheses
 * each position has a type, types do not have to be the same
-*
+* tuples can be destructered
+* elements can also be accessed using a period **.** sign
+* starting index is **0**
+* **unit** is a special case of tuple, where value and corresponding type are written in `()`
 
 ### Character Types
 
