@@ -119,6 +119,11 @@ pub fn basic_tuple_lesson() {
     println!("Tuple {:?}", tup);
     println!("Tuple x {}, y {}, z {}", x, y, z);
 
+    // period access
     let period_access = tup.2;
     println!("Tuple element #3: {}", period_access);
+
+    // unit case of a tuple
+    let unit_case: () = ();
+    println!("Unit tuple: {:?}", unit_case);
 }
