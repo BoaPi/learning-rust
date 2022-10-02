@@ -10,4 +10,5 @@ fn main() {
     basic_boolean_lesson();
     basic_character_lesson();
     basic_tuple_lesson();
+    basic_array_lesson();
 }
