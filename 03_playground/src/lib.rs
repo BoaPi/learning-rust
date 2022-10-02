@@ -129,7 +129,24 @@ pub fn basic_tuple_lesson() {
 }
 
 pub fn basic_array_lesson() {
+    // simple integer array
     let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("Integer array {:?}", a);
 
-    println!("First Array {:?}", a);
+    // simple string array
+    let months: [&str; 12] = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    println!("Months array {:?}", months);
 }
