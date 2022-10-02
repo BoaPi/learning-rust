@@ -127,3 +127,9 @@ pub fn basic_tuple_lesson() {
     let unit_case: () = ();
     println!("Unit tuple: {:?}", unit_case);
 }
+
+pub fn basic_array_lesson() {
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    println!("First Array {:?}", a);
+}
