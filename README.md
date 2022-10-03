@@ -253,6 +253,7 @@ repo which is used to learn rust
 * `predicates` assertion library
 * `std:process:Command` is used to run the binary
 * `rand` is used to generate random numbers
+* `tabled` an easy to use library for pretty print tables of Rust `struct`s and `enum`s.
 
 ## Packaging and Distributing
 
