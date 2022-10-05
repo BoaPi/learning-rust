@@ -72,6 +72,16 @@ repo which is used to learn rust
 * starting index is **0**
 * **unit** is a special case of tuple, where value and corresponding type are written in `()`
 
+### Array Types
+
+* colletion of multiple values
+* all values have the same type
+* have a fixed length and number of elements will not change
+* useful to allocate data on the `stack`, instead to the `heap` or to have always a fixed number of elements
+* initialized with `[i32; 5]` means five elements of type *i32*
+* initialized with `[5; 3]` means three times the same element with the same value
+* elements can be accessed via `array[0]` - to get the first element
+
 ### Character Types
 
 * most primitive **alphabatic** type
