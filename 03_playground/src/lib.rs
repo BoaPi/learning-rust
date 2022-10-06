@@ -150,3 +150,10 @@ pub fn basic_array_lesson() {
     ];
     println!("Months array {:?}", months);
 }
+
+pub fn extended_array_lesson() {
+    // define array
+    let a: [i8; 5] = [1,2,3,4,5];
+
+    println!("Array entry 6 is {}", a[5]);
+}
