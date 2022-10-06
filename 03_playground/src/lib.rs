@@ -153,7 +153,7 @@ pub fn basic_array_lesson() {
 
 pub fn extended_array_lesson() {
     // define array
-    let a: [i8; 5] = [1,2,3,4,5];
+    let a: [i8; 5] = [1, 2, 3, 4, 5];
 
-    println!("Array entry 6 is {}", a[5]);
+    println!("Array entry 4 is {}", a[4]);
 }
