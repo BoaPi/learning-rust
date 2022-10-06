@@ -11,4 +11,5 @@ fn main() {
     basic_character_lesson();
     basic_tuple_lesson();
     basic_array_lesson();
+    extended_array_lesson();
 }
