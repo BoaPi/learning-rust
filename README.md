@@ -81,6 +81,7 @@ repo which is used to learn rust
 * initialized with `[i32; 5]` means five elements of type *i32*
 * initialized with `[5; 3]` means three times the same element with the same value
 * elements can be accessed via `array[0]` - to get the first element
+* if an element out of bound is tried to be accessed, **rust** panics
 
 ### Character Types
 
