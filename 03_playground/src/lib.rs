@@ -162,6 +162,10 @@ fn example_function(x: i16) {
     println!("The value of x is: {}", x);
 }
 
+fn print_labeled_measurement(value: i16, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+}
+
 pub fn basic_function_lesson() {
    // use function
    example_function(5);
