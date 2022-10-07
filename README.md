@@ -93,6 +93,16 @@ repo which is used to learn rust
   and zero-width spaces are all valid char values in Rust
 * range is from `U+0000` to `U+D7FF` and `U+E000` to `U+10FFFF`
 
+## Functions
+
+* most important is the `main` function, because it is the entry point of the program
+* `snake_case` is convention for naming functions
+* `fn`keyword is used to define a function
+* position of the function definition in one file does not matte, because it is the entry point of the program
+* `snake_case` is convention for naming functions
+* `fn`keyword is used to define a function
+* position of the function definition in one file does not matter
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
