@@ -167,6 +167,7 @@ fn print_labeled_measurement(value: i16, unit_label: char) {
 }
 
 pub fn basic_function_lesson() {
-   // use function
-   example_function(5);
+    // use function
+    example_function(5);
+    print_labeled_measurement(8, 'm');
 }
