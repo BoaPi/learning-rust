@@ -12,4 +12,5 @@ fn main() {
     basic_tuple_lesson();
     basic_array_lesson();
     extended_array_lesson();
+    basic_function_lesson();
 }

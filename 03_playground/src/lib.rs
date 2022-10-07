@@ -157,3 +157,12 @@ pub fn extended_array_lesson() {
 
     println!("Array entry 4 is {}", a[4]);
 }
+
+fn example_function(x: i16) {
+    println!("The value of x is: {}", x);
+}
+
+pub fn basic_function_lesson() {
+   // use function
+   example_function(5);
+}
