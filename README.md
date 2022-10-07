@@ -102,6 +102,7 @@ repo which is used to learn rust
 * `snake_case` is convention for naming functions
 * `fn`keyword is used to define a function
 * position of the function definition in one file does not matter
+* function signatures **must** declare the type of each argument
 
 ## Standard libraries
 
