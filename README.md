@@ -104,6 +104,10 @@ repo which is used to learn rust
 * position of the function definition in one file does not matter
 * function signatures **must** declare the type of each argument
 * build out of statements, which can have an optional ending in an expression
+* can return an value
+* no name for return value needed
+* return value of a function is the same as the final expression of a function
+* returning earlies in a function needs the **return** keyword
 
 ### Statement & Expressions
 
