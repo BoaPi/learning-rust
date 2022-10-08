@@ -103,6 +103,15 @@ repo which is used to learn rust
 * `fn`keyword is used to define a function
 * position of the function definition in one file does not matter
 * function signatures **must** declare the type of each argument
+* build out of statements, which can have an optional ending in an expression
+
+### Statement & Expressions
+
+* **statements** are instructions, which do not return a value
+* **expressions** are evaluated to resulting in a value
+* calling a function, calling a macro and a scope block is an **expression**
+* **statements** have a trailing semicolon
+* **expressions** do not have trailing semicolon, adding one will it make an statement
 
 ## Standard libraries
 
