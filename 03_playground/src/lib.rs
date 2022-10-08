@@ -166,8 +166,14 @@ fn print_labeled_measurement(value: i16, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
 }
 
+fn implicit_retunr() -> char {
+    let test: char = 't';
+    test
+}
+
 pub fn basic_function_lesson() {
     // use function
     example_function(5);
     print_labeled_measurement(8, 'm');
+    println!("implicit return {}", implicit_retunr());
 }
