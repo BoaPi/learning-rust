@@ -117,6 +117,12 @@ repo which is used to learn rust
 * **statements** have a trailing semicolon
 * **expressions** do not have trailing semicolon, adding one will it make an statement
 
+## Control Flow
+* rust has **if expressions** and **loops**
+* **if expressions** needs to evaluate to a **bool**
+* no automaatic conversion of types to **bool**
+* an **if expression** can be on the right site of a **let**, to the outcome to the variable
+
 ## Standard libraries
 
 * to obtain user input and write output we need the `io` standard lib
