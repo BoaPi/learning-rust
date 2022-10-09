@@ -122,6 +122,7 @@ repo which is used to learn rust
 * **if expressions** needs to evaluate to a **bool**
 * no automaatic conversion of types to **bool**
 * an **if expression** can be on the right site of a **let**, to the outcome to the variable
+* when using this approach, both arms of the **if expression** needs to be the same type
 
 ## Standard libraries
 
