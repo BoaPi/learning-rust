@@ -6,7 +6,7 @@ pub type Position = (isize, isize);
 pub enum PieceType {
     EptyPiece = -1,
     BigRing = 0,
-    MeRing = 1,
+    MedRing = 1,
     SmlRing = 2,
 }
 
