@@ -29,5 +29,5 @@ impl Board {
         };
     }
 
-    pub fn submit() {}
+    pub fn submit(&mut self, player: u8, pos: Position, piece_type: PieceType) {}
 }
