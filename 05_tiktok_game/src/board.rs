@@ -4,7 +4,7 @@ type BoardLine = [BoardPiece; 3];
 pub type Position = (isize, isize);
 
 pub enum PieceType {
-    EptyPiece = -1,
+    EmptyPiece = -1,
     BigRing = 0,
     MedRing = 1,
     SmlRing = 2,
