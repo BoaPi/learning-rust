@@ -29,5 +29,12 @@ impl Board {
         };
     }
 
-    pub fn submit(&mut self, player: u8, pos: Position, piece_type: PieceType) -> bool {}
+    pub fn submit(&mut self, player: u8, pos: Position, piece_type: PieceType) -> bool {
+        let (x, y) = pos;
+        let piece = self.board[y as usize][x as usize];
+
+        if piece != PieceType::EmptyPiece {
+            return false
+        }
+    }
 }
