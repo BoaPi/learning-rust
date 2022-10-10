@@ -34,7 +34,7 @@ impl Board {
     // get current piece type of the board in given position
     //
     // (B)
-    // if current piece type is empty return false to indicate position on 
+    // if current piece type is empty return false to indicate position on
     // board is already taken
     pub fn submit(&mut self, player: u8, pos: Position, piece_type: PieceType) -> bool {
         // (A)
@@ -42,8 +42,10 @@ impl Board {
         let piece = self.board[y as usize][x as usize];
 
         // (B)
-        if piece != PieceType::EmptyPiece {
+        if piece[piece_type as usize] != -1 {
             return false;
+        } else {
+            return true;
         }
     }
 }
