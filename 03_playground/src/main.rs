@@ -13,4 +13,5 @@ fn main() {
     basic_array_lesson();
     extended_array_lesson();
     basic_function_lesson();
+    basic_loop_lesson();
 }
