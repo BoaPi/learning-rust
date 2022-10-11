@@ -177,3 +177,19 @@ pub fn basic_function_lesson() {
     print_labeled_measurement(8, 'm');
     println!("implicit return {}", implicit_retunr());
 }
+
+pub fn basic_loop_lesson() {
+    // set counter
+    let mut counter: i8 = 0;
+
+    // setup loop
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {}", result);
+}
