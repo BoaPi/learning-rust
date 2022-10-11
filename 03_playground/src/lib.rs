@@ -184,11 +184,20 @@ pub fn basic_loop_lesson() {
 
     // setup loop
     let result = loop {
-        counter += 1;
+        println!("Interim result {}", counter);
+
+        if counter == 5 {
+            println!("Interim result {}", counter);
+            counter = counter * 2;
+            continue;
+        }
 
         if counter == 10 {
+            println!("Interim result {}", counter);
             break counter * 2;
         }
+
+        counter += 1;
     };
 
     println!("The result is {}", result);
