@@ -119,11 +119,19 @@ repo which is used to learn rust
 * **expressions** do not have trailing semicolon, adding one will it make an statement
 
 ## Control Flow
+
 * rust has **if expressions** and **loops**
 * **if expressions** needs to evaluate to a **bool**
 * no automaatic conversion of types to **bool**
 * an **if expression** can be on the right site of a **let**, to the outcome to the variable
 * when using this approach, both arms of the **if expression** needs to be the same type
+
+### Loops
+
+* `loop` keyword runs block of code over and over again
+* runs until it will get break
+* `Ctrl-c` or `break` keyword, can break the **loop**
+* `continue` keyword can be used to skip over remaining code and start next iteration
 
 ## Standard libraries
 
