@@ -202,3 +202,34 @@ pub fn basic_loop_lesson() {
 
     println!("The result is {}", result);
 }
+
+pub fn nesting_loops_lesson() {
+    // setup counter
+    let mut counter: u8 = 0;
+
+    // labeling outter loop
+    'counting_up: loop {
+        println!("count {counter}");
+
+        // setup remaing loops
+        let mut remaining: u8 = 20;
+
+        loop {
+            println!("remaining {remaining}");
+
+            if remaining == 8 {
+                break;
+            }
+
+            if counter == 2 {
+                break 'counting_up;
+            }
+
+            remaining -= 1;
+        }
+
+        counter += 1;
+    }
+
+    println!("Endcounter {counter}");
+}
