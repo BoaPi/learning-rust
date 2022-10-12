@@ -132,6 +132,11 @@ repo which is used to learn rust
 * runs until it will get break
 * `Ctrl-c` or `break` keyword, can break the **loop**
 * `continue` keyword can be used to skip over remaining code and start next iteration
+* **loops** can be used to retry an operation, e.g. checking if a thread if it has completed its job
+* values behind the `break` condition will be returned
+* **loops** can be nested
+* `break` and `continue` will effect the innermost **loop**
+* **loop labels** can be used to specify which **loop** should be affected by `break` and `continue`
 
 ## Standard libraries
 
