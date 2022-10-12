@@ -14,4 +14,5 @@ fn main() {
     extended_array_lesson();
     basic_function_lesson();
     basic_loop_lesson();
+    nesting_loops_lesson();
 }
