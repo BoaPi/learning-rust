@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    for_loop_lesson();
     while_loop_lesson();
     nesting_loops_lesson();
     basic_loop_lesson();

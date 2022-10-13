@@ -246,3 +246,12 @@ pub fn while_loop_lesson() {
 
     println!("END OF THE WHILE LOOP");
 }
+
+pub fn for_loop_lesson() {
+    // create an collection to loop though
+    let collection: [char; 6] = ['a', 'r', 'r', 'a', 'y', 's']; 
+
+    for c  in collection {
+        println!("This is {c}");
+    }
+}
