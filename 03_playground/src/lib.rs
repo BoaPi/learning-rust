@@ -244,14 +244,14 @@ pub fn while_loop_lesson() {
         number -= 1;
     }
 
-    println!("END OF THE WHILE LOOP");
+    println!("LIFT OF!!!");
 }
 
 pub fn for_loop_lesson() {
     // create an collection to loop though
-    let collection: [char; 6] = ['a', 'r', 'r', 'a', 'y', 's']; 
+    let collection: [char; 6] = ['a', 'r', 'r', 'a', 'y', 's'];
 
-    for c  in collection {
+    for c in collection {
         println!("This is {c}");
     }
 }
