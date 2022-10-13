@@ -126,7 +126,7 @@ repo which is used to learn rust
 * an **if expression** can be on the right site of a **let**, to the outcome to the variable
 * when using this approach, both arms of the **if expression** needs to be the same type
 
-### Loops
+### Loops & While
 
 * `loop` keyword runs block of code over and over again
 * runs until it will get break
@@ -137,6 +137,9 @@ repo which is used to learn rust
 * **loops** can be nested
 * `break` and `continue` will effect the innermost **loop**
 * **loop labels** can be used to specify which **loop** should be affected by `break` and `continue`
+* `while` is  used when a program should evaluate befor each loop if the
+  conditions are still **true**, otherwise break the loop
+* `while` loop eleminating a lot of `if`, `else` & `break` nesting, to break a `loop`
 
 ## Standard libraries
 
