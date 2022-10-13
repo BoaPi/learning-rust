@@ -15,4 +15,5 @@ fn main() {
     basic_function_lesson();
     basic_loop_lesson();
     nesting_loops_lesson();
+    while_loop_lesson();
 }
