@@ -140,6 +140,7 @@ repo which is used to learn rust
 * `while` is  used when a program should evaluate befor each loop if the
   conditions are still **true**, otherwise break the loop
 * `while` loop eleminating a lot of `if`, `else` & `break` nesting, to break a `loop`
+* `for` loop can be used to loop through a collection
 
 ## Standard libraries
 
