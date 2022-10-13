@@ -255,3 +255,12 @@ pub fn for_loop_lesson() {
         println!("This is {c}");
     }
 }
+
+pub fn while_to_for_loop_lesson() {
+    // converting the while_loop_lesson to use for loop instead
+    for number in (1..11).rev() {
+        println!("Countdown in {number}");
+    }
+
+    println!("LIFT OF!!!");
+}
