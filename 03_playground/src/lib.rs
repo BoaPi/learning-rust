@@ -233,3 +233,16 @@ pub fn nesting_loops_lesson() {
 
     println!("Endcounter {counter}");
 }
+
+pub fn while_loop_lesson() {
+    // setting up the condition
+    let mut number: u8 = 10;
+
+    while number != 0 {
+        println!("Number value is {number}");
+
+        number -= 1;
+    }
+
+    println!("END OF THE WHILE LOOP");
+}
