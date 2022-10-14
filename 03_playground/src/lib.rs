@@ -264,3 +264,32 @@ pub fn while_to_for_loop_lesson() {
 
     println!("LIFT OF!!!");
 }
+
+pub fn fibonacci_lesson(nth: usize) {
+    // setup the first two numbers to start
+    let mut former: usize = 0;
+    let mut current: usize = 1;
+    let mut counter: usize = 2;
+    let mut interim: usize;
+
+    if nth == 0 {
+        println!("There is no {nth} of the fibonacci");
+    } else if nth == 1 {
+        println!("The {nth} of the fibonacci is {former}");
+    } else if nth == 2 {
+        println!("The {nth} of the fibonacci is {current}");
+    } else {
+        while counter < nth {
+            // add former and current to new former and current
+            interim = former + current;
+            former = current;
+            current = interim;
+
+            // increase counter
+            counter += 1;
+        }
+
+        // when loop is donw print out desired number
+        println!("The {nth} of the fibonacci is {current}");
+    }
+}

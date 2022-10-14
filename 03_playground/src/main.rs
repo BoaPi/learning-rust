@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    fibonacci_lesson(10);
     while_to_for_loop_lesson();
     for_loop_lesson();
     while_loop_lesson();
