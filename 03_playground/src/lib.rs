@@ -293,3 +293,19 @@ pub fn fibonacci_lesson(nth: usize) {
         println!("The {nth} of the fibonacci is {current}");
     }
 }
+
+#[derive(PartialEq)]
+pub enum Scale {
+    Celsius,
+    Fahrenheit,
+}
+
+impl Scale {
+    pub fn convert(self, t: f64) {
+        if self == Scale::Celsius {
+            println!("CELSIUS");
+        } else {
+            println!("FAHRENHEIT");
+        }
+    }
+}
