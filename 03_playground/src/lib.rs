@@ -302,10 +302,14 @@ pub enum Scale {
 
 impl Scale {
     pub fn convert(self, t: f64) {
+        // setup result
+        let result: f64;
         if self == Scale::Celsius {
-            println!("CELSIUS");
+            result = (t * 9.0 / 5.0) + 32.0;
+            println!("{t} celsius in fahrenheit is {result}");
         } else {
-            println!("FAHRENHEIT");
+            result = (t - 32.0) * 5.0 / 9.0;
+            println!("{t} fahrenheit in celsius is {result}");
         }
     }
 }
