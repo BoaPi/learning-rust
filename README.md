@@ -33,6 +33,12 @@ repo which is used to learn rust
 * it enables memory safety guarantees without a garbage collector
 * **ownership** is a set of rules to govern how the memory gets managed
 * if any rule is violated, the programm won't compile
+
+### Ownership rules
+
+* each value in **rust** is an *owner*
+* there can only be one owner at a time
+* when the owner goes out of scope, the value will be dropped
     
 ## Data types
 
