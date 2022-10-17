@@ -26,6 +26,13 @@ repo which is used to learn rust
 * **shadowing** is **not** mutability, reassignment only work with `let` keyword
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
+
+## Ownership
+
+* most unique feature of **rust*
+* it enables memory safety guarantees without a garbage collector
+* **ownership** is a set of rules to govern how the memory gets managed
+* if any rule is violated, the programm won't compile
     
 ## Data types
 
