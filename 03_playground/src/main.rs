@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    basic_string_lesson();
     Scale::convert(Scale::Celsius, 10.0);
     Scale::convert(Scale::Fahrenheit, 10.0);
     fibonacci_lesson(10);

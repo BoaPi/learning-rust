@@ -313,3 +313,15 @@ impl Scale {
         }
     }
 }
+
+pub fn basic_string_lesson() {
+    // setup mutable string literal
+    let mut s = String::from("can not be mutated");
+
+    // if we would define s as shown in the next line, the program won`t compile 
+    // let mut s = "can not be mutated");
+
+    s.push_str(", or?");
+
+    println!("{}\nwas mutated", s);
+}
