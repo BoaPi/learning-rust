@@ -33,7 +33,10 @@ repo which is used to learn rust
 * it enables memory safety guarantees without a garbage collector
 * **ownership** is a set of rules to govern how the memory gets managed
 * if any rule is violated, the programm won't compile
-* allocated memory will be returned to the **memory allocator**, when the variable that owns it is out of scope
+* allocated memory will be returned to the **memory allocator**,
+  when the variable that owns it is out of scope
+* when a variable goes out of scope, rust calls `drop` to return
+  the allocated memory the the memory allocator
 
 ### Ownership rules
 
