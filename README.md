@@ -39,6 +39,7 @@ repo which is used to learn rust
 * each value in **rust** is an *owner*
 * there can only be one owner at a time
 * when the owner goes out of scope, the value will be dropped
+* 
     
 ## Data types
 
@@ -47,6 +48,16 @@ repo which is used to learn rust
 * **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
 * rust hase two **compound** types, `Tuple` and `Array`
 * **compouund** types can hold multiple values
+
+### String Types
+
+* type `String` is most common and hold the ownership of the content
+  * can be create from a literal string - `String`
+  * `String::new` is used to create a new instance of `String`, which is empty
+* type `str` is the primitive counterpart of `String`
+  * also calles **string slice**
+  * usually seen in its borrowed form `&str`
+  * always valid **UTF-8**
 
 ### Integer Types
 
@@ -242,16 +253,6 @@ repo which is used to learn rust
   * **Ok** - operation was successful
   * **Err** - operation was failed
   * with `expect()` the error case can be handled, what usually indicates a problem in the underlying OS
-
-### Strings
-
-* type `String` is most common and hold the ownership of the content
-  * can be create from a literal string - `String`
-  * `String::new` is used to create a new instance of `String`, which is empty
-* type `str` is the primitive counterpart of `String`
-  * also calles **string slice**
-  * usually seen in its borrowed form `&str`
-  * always valid **UTF-8**
 
 ### Reading from files
 
