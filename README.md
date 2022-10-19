@@ -54,10 +54,17 @@ repo which is used to learn rust
 * type `String` is most common and hold the ownership of the content
   * can be create from a literal string - `String`
   * `String::new` is used to create a new instance of `String`, which is empty
+  * `::from` or `::new` namespaces the `from` and `new` functions under the String type
 * type `str` is the primitive counterpart of `String`
   * also calles **string slice**
   * usually seen in its borrowed form `&str`
   * always valid **UTF-8**
+* `String` literals as `let mut s = "some string";` will **not** compile, this is because of:
+  * `String literals` are hard coded and the content is known at compile time
+  * therefore it lives in the stack
+* `String Type` created with `let mut s = String::from("some string");` will compile
+  * in order to have mutability, memory will be allocated on the heap
+  * this memory needs to be allocated by the **memory allocator** at runtime
 
 ### Integer Types
 
