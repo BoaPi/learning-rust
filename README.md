@@ -26,6 +26,7 @@ repo which is used to learn rust
 * **shadowing** is **not** mutability, reassignment only work with `let` keyword
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
+* **rust** will never automatically do a **deep** copy
 
 ## Ownership
 
@@ -42,7 +43,14 @@ repo which is used to learn rust
 
 * each value in **rust** is an *owner*
 * there can only be one owner at a time
-* when the owner goes out of scope, the value will be dropped 
+* when the owner goes out of scope, the value will be **dropped**
+
+### Ownership of different types
+
+* **integers** are simple values of known, fixed size. Therefor will put into **stack**
+* **Strings** - when this type get assigned from one variable to another, the **pointer**, **lenght** and **capacity** 
+  gets copied to the new variable. The content on the **heap** stays untouched.
+  Also the the first variable will be **droped**. This operation is called **move** 
     
 ## Data types
 
@@ -68,6 +76,10 @@ repo which is used to learn rust
 * `String Type` created with `let mut s = String::from("some string");` will compile
   * in order to have mutability, memory will be allocated on the heap
   * this memory needs to be allocated by the **memory allocator** at runtime
+  * **pointer reference**, **lenght** and **capacity** of a `String` is stored in the stack
+  * content of the **pointer reference** is stored in the heap
+  * **lenght** is current memory usage in bytes of the content of the `String`
+  * **capacity** - tbd
 
 ### Integer Types
 
