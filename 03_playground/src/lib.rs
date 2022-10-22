@@ -325,3 +325,23 @@ pub fn basic_string_lesson() {
 
     println!("{}\nwas mutated", s);
 }
+
+pub fn ownership_lesson() {
+    //======================================
+    // copy value over into other variable
+    // both live now in the stack
+    let x: i32 = 5;
+    let y: i32 = x;
+
+    println!("x is {x} and y is {y}");
+
+    //======================================
+    // String type are differnet only parts will be in the stack
+    // the actual content lives i the heap
+    let s1: String = String::from("Hello World");
+    // s1 is no longer valid, because ownership changed to s2
+    // s1 is already dropped here
+    let s2: String = s1;
+
+    println!("s1 was {s2} and s2 is {s2}");
+}
