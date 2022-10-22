@@ -48,6 +48,8 @@ repo which is used to learn rust
 ### Ownership of different types
 
 * **integers** are simple values of known, fixed size. Therefor will put into **stack**
+  This seems to be the opposite of the `String` behavior, but because all data live in the **stack**, 
+  a deep copy or shallow copy is the same.
 * **Strings** - when this type get assigned from one variable to another, the **pointer**, **lenght** and **capacity** 
   gets copied to the new variable. The content on the **heap** stays untouched.
   Also the the first variable will be **droped**. This operation is called **move**.
