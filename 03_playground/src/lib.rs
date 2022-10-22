@@ -338,10 +338,12 @@ pub fn ownership_lesson() {
     //======================================
     // String type are differnet only parts will be in the stack
     // the actual content lives i the heap
-    let s1: String = String::from("Hello World");
-    // s1 is no longer valid, because ownership changed to s2
-    // s1 is already dropped here
-    let s2: String = s1;
+    {
+        let s1: String = String::from("Hello World");
+        // s1 is no longer valid, because ownership changed to s2
+        // s1 is already dropped here
+        let s2: String = s1;
 
-    println!("s1 was {s2} and s2 is {s2}");
+        println!("s1 was {s2} and s2 is {s2}");
+    }
 }
