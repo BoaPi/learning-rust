@@ -346,4 +346,13 @@ pub fn ownership_lesson() {
 
         println!("s1 was {s2} and s2 is {s2}");
     }
+    //======================================
+    // to use both strings after assigning to another variable
+    // "clone" can be used
+    {
+        let s1: String = String::from("Hello again");
+        let s2: String = s1.clone();
+
+        println!("s1 is still {s1} and s2 is {s2} as arbitrary copy");
+    }
 }
