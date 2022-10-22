@@ -55,6 +55,14 @@ repo which is used to learn rust
   Also the the first variable will be **droped**. This operation is called **move**.
   Do get a actual **deep** copy of a `String` type, the `clone()` method can be used. This copies not only the **stack**
   data, but also the **heap** data. Therefor each variable has ownership of its own pointer content
+* variables which uses `Copy``trait wil be still valid after assignment to another variable.
+  This trait can only be implemented by type, where the type and no part of it implementes the `Drop` trait.
+  Rule of thumb: every scalar types and type which requires no allocation or is some form of resource, can implement `Copy` trait. 
+  * all **integer** types
+  * **boolean** type
+  * all ***floating** types
+  * **char** type
+  * **Tuples** - if it only contains types which can implement `Copy`
     
 ## Data types
 
