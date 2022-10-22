@@ -50,7 +50,9 @@ repo which is used to learn rust
 * **integers** are simple values of known, fixed size. Therefor will put into **stack**
 * **Strings** - when this type get assigned from one variable to another, the **pointer**, **lenght** and **capacity** 
   gets copied to the new variable. The content on the **heap** stays untouched.
-  Also the the first variable will be **droped**. This operation is called **move** 
+  Also the the first variable will be **droped**. This operation is called **move**.
+  Do get a actual **deep** copy of a `String` type, the `clone()` method can be used. This copies not only the **stack**
+  data, but also the **heap** data. Therefor each variable has ownership of its own pointer content
     
 ## Data types
 
