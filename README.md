@@ -38,6 +38,8 @@ repo which is used to learn rust
   when the variable that owns it is out of scope
 * when a variable goes out of scope, rust calls `drop` to return
   the allocated memory the the memory allocator
+* when a **variable** that includes data on the heap goes out of scope, the related value will be **droped**
+* unless the data was **moved** to another variable
 
 ### Ownership rules
 
