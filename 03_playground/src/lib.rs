@@ -391,7 +391,7 @@ pub fn ownership_lesson() {
     }
 
     //======================================
-    //i will be copied and can be used after passed into function
+    // i will be copied and can be used after passed into function
     {
         let i: i32 = 5;
 
