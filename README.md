@@ -69,7 +69,9 @@ repo which is used to learn rust
 ### Ownership and Functions
 
 * passing values to functions is similar to assign a value to a variable
-* passing will **move** or **copy** 
+* passing will **move** or **copy**
+* when functions return a values, ownership is given
+* functions can take ownership and give it back
     
 ## Data types
 
