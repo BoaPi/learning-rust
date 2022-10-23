@@ -400,4 +400,18 @@ pub fn ownership_lesson() {
         println!("I'm still valid and in scope as i: {i}");
     }
 
+    //======================================
+    // s1 will granted ownership
+    // s2 ownership is moved to function and s3 will get ownership
+    // of the returned value
+    {
+        let s1: String = gives_ownrship();
+        let s2: String = String::from("Ownership");
+        let s3: String = takes_and_gives_back_ownership(s2);
+
+        println!("s1 is: {s1}");
+        // the next line is invalid, because s2 was moved
+        // println!("s2 is: {s2}");
+        println!("s3 is: {s3}");
+    }
 }
