@@ -366,4 +366,27 @@ pub fn ownership_lesson() {
         println!("some integer is: {some_integer}");
     }
 
+    //======================================
+    // s will go out of scope and cant not be used after
+    // moved to function
+    {
+        let s: String = String::from("I'm going to be moved");
+
+        takes_ownership(s);
+
+        // following line won't compile, due to s got moved already
+        // and is not valid anymore
+        // println!("s is no longer valid here: {s}");
+    }
+
+    //======================================
+    //i will be copied and can be used after passed into function
+    {
+        let i: i32 = 5;
+
+        makes_copy(i);
+
+        println!("I'm still valid and in scope as i: {i}");
+    }
+
 }
