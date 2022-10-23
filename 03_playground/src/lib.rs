@@ -346,6 +346,7 @@ pub fn ownership_lesson() {
 
         println!("s1 was {s2} and s2 is {s2}");
     }
+
     //======================================
     // to use both strings after assigning to another variable
     // "clone" can be used
@@ -355,4 +356,14 @@ pub fn ownership_lesson() {
 
         println!("s1 is still {s1} and s2 is {s2} as arbitrary copy");
     }
+
+    // function for demonstration
+    fn takes_ownership(some_string: String) {
+        println!("some string is: {some_string}");
+    }
+
+    fn makes_copy(some_integer: i32) {
+        println!("some integer is: {some_integer}");
+    }
+
 }
