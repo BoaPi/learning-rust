@@ -63,6 +63,11 @@ repo which is used to learn rust
   * all ***floating** types
   * **char** type
   * **Tuples** - if it only contains types which can implement `Copy`
+
+### Ownership and Functions
+
+* passing values to functions is similar to assign a value to a variable
+* passing will **move** or **copy** 
     
 ## Data types
 
