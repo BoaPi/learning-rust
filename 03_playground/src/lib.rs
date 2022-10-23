@@ -366,6 +366,17 @@ pub fn ownership_lesson() {
         println!("some integer is: {some_integer}");
     }
 
+    fn gives_ownrship() -> String {
+        let inner_s: String = String::from("your ownership");
+
+        inner_s
+    }
+
+    fn takes_and_gives_back_ownership(mut some_string: String) -> String {
+        some_string.push_str(" - MODIFIED");
+        some_string
+    }
+
     //======================================
     // s will go out of scope and cant not be used after
     // moved to function
