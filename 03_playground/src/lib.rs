@@ -409,11 +409,11 @@ pub fn ownership_lesson() {
     {
         let s1: String = gives_ownrship();
         let s2: String = String::from("Ownership");
-        let s3: String = takes_and_gives_back_ownership(s2);
+        let (s3, i) = takes_and_gives_back_ownership(s2);
 
         println!("s1 is: {s1}");
         // the next line is invalid, because s2 was moved
         // println!("s2 is: {s2}");
-        println!("s3 is: {s3}");
+        println!("s3 is: {s3} and of lenght {i}");
     }
 }
