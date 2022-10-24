@@ -372,9 +372,11 @@ pub fn ownership_lesson() {
         inner_s
     }
 
-    fn takes_and_gives_back_ownership(mut some_string: String) -> String {
+    fn takes_and_gives_back_ownership(mut some_string: String) -> (String, usize) {
         some_string.push_str(" - MODIFIED");
-        some_string
+        let lenght: usize = some_string.len();
+
+        (some_string, lenght)
     }
 
     //======================================
