@@ -225,7 +225,7 @@ repo which is used to learn rust
 * **crates.io** is the site where **crates** gets published
 * `Cargo.lock` file is used to pin down every used version of a crate for the project
 * `Cargo.lock` ensures that every build is the same
-* `cargo update` can update dependecies
+* `cargo update` can update dependencies
 
 ### Heap & Stack
 
@@ -312,9 +312,9 @@ repo which is used to learn rust
 ### Smart-Pointer
 
 * `Pointer` is a address to a memory location
-* `Box<T>` is the most straigforward smart pointer
+* `Box<T>` is the most straight forward smart pointer
 * a `Box<T>` smart pointer stores data on the `heap`instead of the `stack`
-* `Boxes` do not have a performance overhead, but also do not have extra caüabilities
+* `Boxes` do not have a performance overhead, but also do not have extra capabilities
 * common uses cases are:
   * a type with an unknown size at compile time and a value of that type should be used
   in a context which requires an exact size
@@ -323,7 +323,7 @@ repo which is used to learn rust
 
 ### Enumerations
 
-* is used to define a type by enumerating over its possible varinats
+* is used to define a type by enumerating over its possible variants
 * is used to encode meaning with data
 * it is possible to attach data to an `enum` directly, without using a `struct`
 * each variant of an `enum` becomes a function to construct an instance of the `enum`
@@ -331,18 +331,18 @@ repo which is used to learn rust
   different types and associated data
 * with `impl` it is possible to define `methods` on enums
 * `enums` with different typed variants are better suited to pass into a function, than 
-  the same amont of differents `structs`
+  the same amount of different `structs`
 
 ### Output - Debugging & Logging
 
 * by adding `#[derive(Debug)]` enables output for custom types
 * `Debug` trait is usually output that targets **developers**
 * `Display` trait is usually output that targets the **user**
-* logging of output of the programm should be done with `stdout` - `println!()`
+* logging of output of the program should be done with `stdout` - `println!()`
 * logging of errors should be done with `stderr` - `eprintln!()`
 * printing to the console is slow, but there are ways to speed things up:
   1. reduce number of writes that **flush** the terminal. `println!` tells the system to **flush** the terminal everytime.
-  if this is not neccessary the `stdout` can be wrapped in a `BufWriter`
+  if this is not necessary the `stdout` can be wrapped in a `BufWriter`
   2. acquire a lock on `stdout`or `stderr` and use `writeln!` to print directly
   this prevents the system from locking and unlocking the `stdout` all the time
 
@@ -350,12 +350,12 @@ repo which is used to learn rust
 
 * unit test will be in the file, where the units are which should be tested
 * convention is to create a module named `tests` in each file and to annotate it with `cfg(test)`
-* integration test will live externaly to the `src` files in a folder called `tests`
+* integration test will live externally to the `src` files in a folder called `tests`
 * integration test will use the code in the same way as other code would do
 * assertions are done with `assert_eq!` macro
 * write integration tests for every behavior a user can encounter
 * integrations test should not cover all edge cases, lean on unit tests for that
-* do **not** test what you can not controll
+* do **not** test what you can not control
 
 ## Packages
 
