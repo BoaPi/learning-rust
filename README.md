@@ -72,6 +72,11 @@ repo which is used to learn rust
 * passing will **move** or **copy**
 * when functions return a values, ownership is given
 * functions can take ownership and give it back
+
+### References
+
+* `reference` is an address to the stored data, but owned by an other variable
+* `reference` guarantees a valid value of a particular type for the `reference` lifetime
     
 ## Data types
 
