@@ -78,6 +78,8 @@ repo which is used to learn rust
 * `reference` is an address to the stored data, but owned by an other variable
 * `reference` guarantees a valid value of a particular type for the `reference` lifetime
 * `references` are declared with an `&`
+* referencing an value of a variable is called `borrowing`
+* `references` are immutable by default, you can **not** mutate what you **not** own
     
 ## Data types
 
