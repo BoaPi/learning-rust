@@ -379,6 +379,9 @@ pub fn ownership_lesson() {
         (some_string, lenght)
     }
 
+    fn takes_in_a_reference(s: &String) -> usize {
+        s.len()
+    }
     //======================================
     // s will go out of scope and cant not be used after
     // moved to function
