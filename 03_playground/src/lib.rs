@@ -382,6 +382,7 @@ pub fn ownership_lesson() {
     fn takes_in_a_reference(s: &String) -> usize {
         s.len()
     }
+
     //======================================
     // s will go out of scope and cant not be used after
     // moved to function
@@ -418,5 +419,16 @@ pub fn ownership_lesson() {
         // the next line is invalid, because s2 was moved
         // println!("s2 is: {s2}");
         println!("s3 is: {s3} and of lenght {i}");
+    }
+
+    //======================================
+    // s1 will granted ownership
+    // s1 value will only be used as a reference
+    // len will get ownership of the returned value
+    {
+        let s1: String = gives_ownrship();
+
+        let len = takes_in_a_reference(&s1);
+        println!("len is {len}");
     }
 }
