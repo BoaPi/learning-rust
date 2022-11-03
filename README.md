@@ -19,8 +19,8 @@ repo which is used to learn rust
 * constants using the keyword `const`
 * the type of a constant have to be annotated
 * constants can be declared at any scope
-* constants are only allowed to be an constatn expression, **not** a result of a runtime computation
-* constants have a naming convention, `NAME_OF_THE_CONSTANT`, all uppercase with underscores betwenn words
+* constants are only allowed to be an constant expression, **not** a result of a runtime computation
+* constants have a naming convention, `NAME_OF_THE_CONSTANT`, all uppercase with underscores between words
 * **shadowing** is the re-declaration of a **immutable** variable 
 * **shadowing** is scope related
 * **shadowing** is **not** mutability, reassignment only work with `let` keyword
@@ -33,12 +33,12 @@ repo which is used to learn rust
 * most unique feature of **rust*
 * it enables memory safety guarantees without a garbage collector
 * **ownership** is a set of rules to govern how the memory gets managed
-* if any rule is violated, the programm won't compile
+* if any rule is violated, the program won't compile
 * allocated memory will be returned to the **memory allocator**,
   when the variable that owns it is out of scope
 * when a variable goes out of scope, rust calls `drop` to return
-  the allocated memory the the memory allocator
-* when a **variable** that includes data on the heap goes out of scope, the related value will be **droped**
+  the allocated memory the memory allocator
+* when a **variable** that includes data on the heap goes out of scope, the related value will be **dropped**
 * unless the data was **moved** to another variable
 
 ### Ownership rules
@@ -52,13 +52,13 @@ repo which is used to learn rust
 * **integers** are simple values of known, fixed size. Therefor will put into **stack**
   This seems to be the opposite of the `String` behavior, but because all data live in the **stack**, 
   a deep copy or shallow copy is the same.
-* **Strings** - when this type get assigned from one variable to another, the **pointer**, **lenght** and **capacity** 
+* **Strings** - when this type get assigned from one variable to another, the **pointer**, **length** and **capacity** 
   gets copied to the new variable. The content on the **heap** stays untouched.
-  Also the the first variable will be **droped**. This operation is called **move**.
+  Also the first variable will be **dropped**. This operation is called **move**.
   Do get a actual **deep** copy of a `String` type, the `clone()` method can be used. This copies not only the **stack**
   data, but also the **heap** data. Therefor each variable has ownership of its own pointer content
-* variables which uses `Copy``trait wil be still valid after assignment to another variable.
-  This trait can only be implemented by type, where the type and no part of it implementes the `Drop` trait.
+* variables which uses `Copy``trait will be still valid after assignment to another variable.
+  This trait can only be implemented by type, where the type and no part of it implements the `Drop` trait.
   Rule of thumb: every scalar types and type which requires no allocation or is some form of resource, can implement `Copy` trait. 
   * all **integer** types
   * **boolean** type
@@ -83,8 +83,8 @@ repo which is used to learn rust
 * **scalar** and **compound** are a subset of data types
 * **scalar** types are single value types
 * **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
-* rust hase two **compound** types, `Tuple` and `Array`
-* **compouund** types can hold multiple values
+* rust has two **compound** types, `Tuple` and `Array`
+* **compound** types can hold multiple values
 
 ### String Types
 
