@@ -77,6 +77,7 @@ repo which is used to learn rust
 
 * `reference` is an address to the stored data, but owned by an other variable
 * `reference` guarantees a valid value of a particular type for the `reference` lifetime
+* `references` are declared with an `&`
     
 ## Data types
 
