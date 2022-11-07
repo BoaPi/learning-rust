@@ -439,8 +439,10 @@ pub fn ownership_lesson() {
         fn change(some_string: &mut String) {
             some_string.push_str(" Mutated Reference");
         }
+
         let mut s1: String = gives_ownrship();
         println!("s1 before mutate: {s1}");
+
         change(&mut s1);
         println!("s1 after mutate: {s1}");
     }
