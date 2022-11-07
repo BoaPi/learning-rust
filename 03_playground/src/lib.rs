@@ -431,4 +431,17 @@ pub fn ownership_lesson() {
         let len = takes_in_a_reference(&s1);
         println!("len is {len}");
     }
+
+    //======================================
+    // change function will receive a mutable reference
+    // s1 will be mutated after passed to change function
+    {
+        fn change(some_string: &mut String) {
+            some_string.push_str(" Mutated Reference");
+        }
+        let mut s1: String = gives_ownrship();
+        println!("s1 before mutate: {s1}");
+        change(&mut s1);
+        println!("s1 after mutate: {s1}");
+    }
 }
