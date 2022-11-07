@@ -81,7 +81,16 @@ repo which is used to learn rust
 * referencing an value of a variable is called `borrowing`
 * `references` are immutable by default, you can **not** mutate what you **not** own
 * `mutable references` are able to be changed and therefor will mutate the value it borrows
-* `mutable references` are restricted to be the only reference of that value
+* `mutable references` are restricted to be the only one at the time
+* `mutable references` prevents data races at compile time
+* `data races` occur when:
+  * two or more pointer access the same data at the same time
+  * at least one of the pointer writes to the data
+  * there is no **sync** to access of the data
+* with `scope` it is possible to have multiple `mutable references` but not at the same time
+* `immutable references` & `mutable references` at the same time are also not allowed.
+  The reason is, an user of an `immutable reference` is not expecting any change of
+  the reference. Multiple `immutable references` are allowed.
     
 ## Data types
 
