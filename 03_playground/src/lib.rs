@@ -446,4 +446,23 @@ pub fn ownership_lesson() {
         change(&mut s1);
         println!("s1 after mutate: {s1}");
     }
+
+    //======================================
+    // show case multiple references
+    // and only one mutable reference is allowed after the
+    // first references are out of scope
+    {
+        fn change(some_string: &mut String) {
+            some_string.push_str(" Mutated Reference");
+        }
+
+        let mut s1: String = gives_ownrship();
+        let r1: &String = &s1;
+        let r2: &String = &s1;
+
+        println!("double reference of {s1} - r1 {r1} & r2 {r2}");
+
+        change(&mut s1);
+        println!("s1 after mutate: {s1}");
+    }
 }
