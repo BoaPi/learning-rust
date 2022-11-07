@@ -80,6 +80,8 @@ repo which is used to learn rust
 * `references` are declared with an `&`
 * referencing an value of a variable is called `borrowing`
 * `references` are immutable by default, you can **not** mutate what you **not** own
+* `mutable references` are able to be changed and therefor will mutate the value it borrows
+* `mutable references` are restricted to be the only reference of that value
     
 ## Data types
 
