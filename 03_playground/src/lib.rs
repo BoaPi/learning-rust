@@ -466,3 +466,27 @@ pub fn ownership_lesson() {
         println!("s1 after mutate: {s1}");
     }
 }
+
+pub fn first_slice_lesson() {
+    // goal is to find the first word in the given string
+    fn first_word(s: &String) -> usize {
+        // convert string to byte array to look for white spaces
+        let bytes = s.as_bytes();
+
+        // take byte array, covert to iterator with tuple
+        // of index & reference of the value
+        for (i, &item) in bytes.iter().enumerate() {
+            // b'' is byte literal
+            if item == b' ' {
+                return i;
+            }
+        }
+
+        s.len()
+    }
+
+    let example = String::from("Example String with five words");
+    let result = first_word(&example);
+
+    println!("Index of the first space is {result}");
+}
