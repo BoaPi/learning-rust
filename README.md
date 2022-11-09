@@ -91,6 +91,13 @@ repo which is used to learn rust
 * `immutable references` & `mutable references` at the same time are also not allowed.
   The reason is, an user of an `immutable reference` is not expecting any change of
   the reference. Multiple `immutable references` are allowed.
+* `immutable references` will go out of scope when **not** used anymore.
+  The ability of the compiler to tell that a reference is **not** used anymore
+  before the scopes ends, is called **Non-Lexical-Lifetimes** (NLL)
+* pointers which references a memory location that is owned by an other variable
+  are called `dangling pointers/references`
+* rust guarantees that a `reference` will never be `dangling`
+* the compiler will ensure that the data will not go out of scope before the `reference`
     
 ## Data types
 
