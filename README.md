@@ -98,6 +98,13 @@ repo which is used to learn rust
   are called `dangling pointers/references`
 * rust guarantees that a `reference` will never be `dangling`
 * the compiler will ensure that the data will not go out of scope before the `reference`
+
+### Slice
+
+* `slices` are a kind of `reference`
+* `slices` do **not** have ownership of the data
+* `slices` are a contiguous sequence of elements in a collection
+  and not whole collection
     
 ## Data types
 
