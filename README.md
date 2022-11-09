@@ -105,7 +105,13 @@ repo which is used to learn rust
 * `slices` do **not** have ownership of the data
 * `slices` are a contiguous sequence of elements in a collection
   and not whole collection
+* 
     
+## Literal Syntax
+
+* `literals` are tokens used in literal expressions
+* byte literal is a single **ASCII** character, e.g `b' '` can be used to check for space in byte
+
 ## Data types
 
 * **scalar** and **compound** are a subset of data types
