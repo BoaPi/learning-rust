@@ -469,14 +469,19 @@ pub fn ownership_lesson() {
 
 pub fn first_slice_lesson() {
     // goal is to find the first word in the given string
+    // the problem with this function is, that the returned index
+    // is unrelated to the string
+    // if the string gets mutated or deleted, "example" would
+    // still hold a usize number, which has no meaning
     fn first_word(s: &String) -> usize {
         // convert string to byte array to look for white spaces
         let bytes = s.as_bytes();
 
         // take byte array, covert to iterator with tuple
         // of index & reference of the value
+        // because the it is a reference to an value, we use "&"
         for (i, &item) in bytes.iter().enumerate() {
-            // b'' is byte literal
+            // b'' is byte literal which checks for spaces
             if item == b' ' {
                 return i;
             }
