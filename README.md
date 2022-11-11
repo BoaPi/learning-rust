@@ -27,10 +27,6 @@ repo which is used to learn rust
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
 * **rust** will never automatically do a **deep** copy
-* `..` is in rust the syntax for range
-* `..4` would mean from index `0` to index 4
-* `5..` would mean from index `5` to the end
-* `..` would mean from index `0` to the end
 
 ## Ownership
 
@@ -330,6 +326,10 @@ repo which is used to learn rust
 * not all variables can just be printed, therefore we can use the **debug representation**, `{:?}`
 * `PathBuf` does not implement `std::fmt::Display`, therefor to use `println!` on it, we need to call `display()` on the value
 * `String.trim_end()` removes trailign whitespaces
+* `..` is in rust the syntax for range
+* `..4` would mean from index `0` to index 4
+* `5..` would mean from index `5` to the end
+* `..` would mean from index `0` to the end
 
 ### IO
 
