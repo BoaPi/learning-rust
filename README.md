@@ -27,6 +27,10 @@ repo which is used to learn rust
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
 * **rust** will never automatically do a **deep** copy
+* `..` is in rust the syntax for range
+* `..4` would mean from index `0` to index 4
+* `5..` would mean from index `5` to the end
+* `..` would mean from index `0` to the end
 
 ## Ownership
 
