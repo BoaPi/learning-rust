@@ -109,7 +109,9 @@ repo which is used to learn rust
 * `slices` do **not** have ownership of the data
 * `slices` are a contiguous sequence of elements in a collection
   and not whole collection
-* 
+* `string slice` is a `reference` to a part of the String
+* `string slice` syntax looks like this; `&s[0..3]`
+*
     
 ## Literal Syntax
 
