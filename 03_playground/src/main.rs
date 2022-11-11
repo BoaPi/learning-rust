@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    second_slice_lesson();
     first_slice_lesson();
     ownership_lesson();
     basic_string_lesson();
