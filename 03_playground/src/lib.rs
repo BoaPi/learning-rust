@@ -515,4 +515,26 @@ pub fn second_slice_lesson() {
     let result = first_word(&example);
 
     println!("First word of the string is: {result}");
+
+    // different use cases
+    let my_string = String::from("hello world!");
+
+    // function takes in a reference to a string slice
+    let _word = first_word(&my_string[0..6]);
+    let _word = first_word(&my_string[..]);
+
+    // functions takes in a reference to a string
+    let _word = first_word(&my_string);
+
+    // also works with string literals
+    let my_string_literal = "Hello World!";
+
+    // function takes in a reference to a string literal slice
+    let _word = first_word(&my_string_literal[0..6]);
+    let _word = first_word(&my_string_literal[..]);
+
+    // functions takes in a reference to a string literal
+    let word = first_word(&my_string_literal);
+
+    println!("Slice Lesson done. Word is: {word}")
 }
