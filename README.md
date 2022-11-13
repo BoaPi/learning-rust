@@ -129,7 +129,7 @@ repo which is used to learn rust
   * `String::new` is used to create a new instance of `String`, which is empty
   * `::from` or `::new` namespaces the `from` and `new` functions under the String type
 * type `str` is the primitive counterpart of `String`
-  * also calles **string slice**
+  * also called **string slice**
   * usually seen in its borrowed form `&str`
   * always valid **UTF-8**
 * `String` literals as `let mut s = "some string";` will **not** compile, this is because of:
@@ -138,9 +138,9 @@ repo which is used to learn rust
 * `String Type` created with `let mut s = String::from("some string");` will compile
   * in order to have mutability, memory will be allocated on the heap
   * this memory needs to be allocated by the **memory allocator** at runtime
-  * **pointer reference**, **lenght** and **capacity** of a `String` is stored in the stack
+  * **pointer reference**, **length** and **capacity** of a `String` is stored in the stack
   * content of the **pointer reference** is stored in the heap
-  * **lenght** is current memory usage in bytes of the content of the `String`
+  * **length** is current memory usage in bytes of the content of the `String`
   * **capacity** - tbd
 
 ### Integer Types
