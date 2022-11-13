@@ -107,7 +107,7 @@ repo which is used to learn rust
   and not whole collection
 * `string slice` is a `reference` to a part of the String
 * `string slice` syntax looks like this; `&s[0..3]`
-*
+* there are also other slices than strings slices, e.g. `array slices`
     
 ## Literal Syntax
 
@@ -176,7 +176,7 @@ repo which is used to learn rust
 * have fixed length, ones decalred this can not be changed
 * declared comma-separated inside of parentheses
 * each position has a type, types do not have to be the same
-* tuples can be destructered
+* tuples can be destructured
 * elements can also be accessed using a period **.** sign
 * starting index is **0**
 * **unit** is a special case of tuple, where value and corresponding type are written in `()`
@@ -191,11 +191,11 @@ repo which is used to learn rust
 * initialized with `[5; 3]` means three times the same element with the same value
 * elements can be accessed via `array[0]` - to get the first element
 * if an element out of bound is tried to be accessed, **rust** panics
-* can only be indexed with **unsigend** numbers
+* can only be indexed with **unsigned** numbers
 
 ### Character Types
 
-* most primitive **alphabatic** type
+* most primitive **alphabetic** type
 * `char` literals are specified with single quotes, e.g. `let c: char = 'c';`
 * **4 bytes** in size
 * represents a **scalar** unicode value
@@ -250,6 +250,11 @@ repo which is used to learn rust
   conditions are still **true**, otherwise break the loop
 * `while` loop eleminating a lot of `if`, `else` & `break` nesting, to break a `loop`
 * `for` loop can be used to loop through a collection
+
+### Structs or Structures
+
+* custom data type
+* package together and name multiple related data, that makes up a meaningful group
 
 ## Standard libraries
 
