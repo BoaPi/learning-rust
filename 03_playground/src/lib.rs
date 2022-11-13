@@ -498,9 +498,8 @@ pub fn first_slice_lesson() {
 
 pub fn second_slice_lesson() {
     // same goal as first_word() function
-    // takes in a reference to a string and a number
-    // which represents the nth word of the string
-    fn first_word(s: &String) -> &str {
+    // takes in a reference to a string slice
+    fn first_word(s: &str) -> &str {
         let bytes = s.as_bytes();
 
         for (i, &item) in bytes.iter().enumerate() {
