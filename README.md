@@ -132,6 +132,7 @@ repo which is used to learn rust
   * also called **string slice**
   * usually seen in its borrowed form `&str`
   * always valid **UTF-8**
+  * by default `immutable reference`
 * `String` literals as `let mut s = "some string";` will **not** compile, this is because of:
   * `String literals` are hard coded and the content is known at compile time
   * therefore it lives in the stack
