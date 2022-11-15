@@ -255,6 +255,10 @@ repo which is used to learn rust
 
 * custom data type
 * package together and name multiple related data, that makes up a meaningful group
+* the single pieces of a struct can be different types
+* each piece of data has a name
+* to access data the name can be used, instead of order of the pieces as in `tuples`
+* defined with the `struct` keyword
 
 ## Standard libraries
 
