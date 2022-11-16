@@ -257,8 +257,13 @@ repo which is used to learn rust
 * package together and name multiple related data, that makes up a meaningful group
 * the single pieces of a struct can be different types
 * each piece of data has a name
-* to access data the name can be used, instead of order of the pieces as in `tuples`
+* to access data the **dot notation** can be used, instead of order of the pieces as in `tuples`
 * defined with the `struct` keyword
+* to use a `struct` an instance with concrete values for all the pieces needs to be created
+* to create an instance the name of the `struct` s used `Example_Struct {}` 
+* inside the curly brackets **key: value** pairs are used
+* if the instance is mutable, the value can be changed with **dot notation**
+* only the whole `struct` can be mutable or immutable, **not** specific fields
 
 ## Standard libraries
 
