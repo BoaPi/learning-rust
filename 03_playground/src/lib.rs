@@ -545,3 +545,22 @@ struct User {
     email: String,
     sign_in_count: u64,
 }
+
+pub fn basic_struct_lesson() {
+    // creating a immutable user and using dot notation access data
+    {
+        let user1 = User {
+            active: true,
+            username: String::from("Example User"),
+            email: String::from("something@web.com"),
+            sign_in_count: 1,
+        };
+
+        println!("Username: {0}", user1.username);
+        println!("Email: {0}", user1.email);
+        println!("Is the user still active: {0}", user1.active);
+        println!("How often was the user signed in: {0}", user1.sign_in_count);
+    }
+
+    // creating a mutable user and updating via dot notation
+}
