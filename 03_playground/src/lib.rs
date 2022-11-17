@@ -539,6 +539,7 @@ pub fn second_slice_lesson() {
     println!("Slice Lesson done. Word is: {word}")
 }
 
+#[derive(Debug)]
 struct User {
     active: bool,
     username: String,
