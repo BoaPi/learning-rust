@@ -563,4 +563,21 @@ pub fn basic_struct_lesson() {
     }
 
     // creating a mutable user and updating via dot notation
+    {
+        let mut user2 = User {
+            active: false,
+            username: String::from("Example next User"),
+            email: String::from("something_new@web.com"),
+            sign_in_count: 2,
+        };
+
+        println!("inactive Username: {0}", user2.username);
+        println!("Is the user still active: {0}", user2.active);
+
+        // update user2 with dot notation
+        user2.active = true;
+
+        println!("active Username: {0}", user2.username);
+        println!("Is the user still active: {0}", user2.active);
+    }
 }
