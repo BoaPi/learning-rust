@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    building_structs_lesson();
     basic_struct_lesson();
     second_slice_lesson();
     first_slice_lesson();
