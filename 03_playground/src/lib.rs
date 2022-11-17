@@ -547,6 +547,17 @@ struct User {
     sign_in_count: u64,
 }
 
+// function takes in same parameters as struct needs
+// shorthand assignment can be used
+fn build_user(username: String, email: String) -> User {
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 0,
+    }
+}
+
 pub fn basic_struct_lesson() {
     // creating a immutable user and using dot notation access data
     {
@@ -584,17 +595,6 @@ pub fn basic_struct_lesson() {
 }
 
 pub fn building_structs_lesson() {
-    // function takes in same parameters as struct needs
-    // shorthand assignment can be used
-    fn build_user(username: String, email: String) -> User {
-        User {
-            active: true,
-            username,
-            email,
-            sign_in_count: 0,
-        }
-    }
-
     // user build function to create new User
     let user3 = build_user(String::from("New User"), String::from("new@email.com"));
     println!("{:?}", user3);
