@@ -596,6 +596,22 @@ pub fn basic_struct_lesson() {
 
 pub fn building_structs_lesson() {
     // user build function to create new User
-    let user3 = build_user(String::from("New User"), String::from("new@email.com"));
-    println!("{:?}", user3);
+    {
+        let user3 = build_user(String::from("New User"), String::from("new@email.com"));
+        println!("{:?}", user3);
+    }
+
+    // using update syntax for creating a new user from an given instance
+    {
+        let user1 = build_user(
+            String::from("New Instance"),
+            String::from("instance@new.com"),
+        );
+        let user2 = User {
+            username: String::from("Update Syntax"),
+            ..user1
+        };
+
+        println!("Inherited User: {:?}", user2);
+    }
 }
