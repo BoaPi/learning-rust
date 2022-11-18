@@ -264,6 +264,9 @@ repo which is used to learn rust
 * inside the curly brackets **key: value** pairs are used
 * if the instance is mutable, the value can be changed with **dot notation**
 * only the whole `struct` can be mutable or immutable, **not** specific fields
+* update syntax `..<struct_name_to_inherit_from>` can be used to create new structs from other structs
+* update syntax can lead to, that the inherited struct can **not** be longer used,
+  due to missing **copy trait**. E.g. for `String` types
 
 ## Standard libraries
 
