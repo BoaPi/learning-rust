@@ -270,6 +270,7 @@ repo which is used to learn rust
 * `tuple structs` are a special `struct` variant
 * `tuple sturcts` have a name compared to usual `tuples`
 * `tuple structs` do **not** have named fields like `struct`
+* `tuple structs` can also be desturctured and **dot notion** with an index to access a piece of data
 
 ## Standard libraries
 
