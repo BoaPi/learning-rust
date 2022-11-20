@@ -267,6 +267,9 @@ repo which is used to learn rust
 * update syntax `..<struct_name_to_inherit_from>` can be used to create new structs from other structs
 * update syntax can lead to, that the inherited struct can **not** be longer used,
   due to missing **copy trait**. E.g. for `String` types
+* `tuple structs` are a special `struct` variant
+* `tuple sturcts` have a name compared to usual `tuples`
+* `tuple structs` do **not** have named fields like `struct`
 
 ## Standard libraries
 
