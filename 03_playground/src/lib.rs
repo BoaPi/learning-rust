@@ -615,3 +615,22 @@ pub fn building_structs_lesson() {
         println!("Inherited User: {:?}", user2);
     }
 }
+
+pub fn tuple_structs_lesson() {
+    // using tuple structs to create different types
+    // named tuples, but not named fields
+    #[derive(Debug)]
+    struct Color(i32, i32, i32);
+    #[derive(Debug)]
+    struct Point(i32, i32, i32);
+
+    // creating some variables with the defined tuple structs
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 2, 5);
+
+    println!("Black from tuple struct {:?}", black);
+    println!(
+        "An origin point was created from tuple struct: {:?}",
+        origin
+    )
+}
