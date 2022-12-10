@@ -635,7 +635,7 @@ pub fn tuple_structs_lesson() {
     )
 }
 
-pub fn unit_like_structs() {
+pub fn unit_like_structs_lesson() {
     // declare a new unit like structs
     #[derive(Debug)]
     struct AlwaysEqual;
