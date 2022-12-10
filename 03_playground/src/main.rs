@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lin.rs file
 fn main() {
+    unit_like_structs();
     tuple_structs_lesson();
     building_structs_lesson();
     basic_struct_lesson();
