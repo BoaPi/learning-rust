@@ -270,7 +270,10 @@ repo which is used to learn rust
 * `tuple structs` are a special `struct` variant
 * `tuple sturcts` have a name compared to usual `tuples`
 * `tuple structs` do **not** have named fields like `struct`
-* `tuple structs` can also be desturctured and **dot notion** with an index to access a piece of data
+* `tuple structs` can also be destructured and **dot notion** with an index to access a piece of data
+* `unit like structs` are `structs` that do **not** have any fields and behave similar to `()`
+* `unit like structs` are useful when a `trait` should be implemented on a type, but there is 
+  no data that should be stored in the type itself
 
 ## Standard libraries
 
