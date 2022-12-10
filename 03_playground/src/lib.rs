@@ -644,3 +644,23 @@ pub fn unit_like_structs_lesson() {
 
     println!("Unit like Struct: {:?}", subject);
 }
+
+pub fn rectangle_lesson() {
+    // this lesson will re-implement over and over the same
+    // functionality, but with every step a little more refactor
+    // towards using structs
+    {
+        // first version uses simple variables and no structs
+        let width_1 = 30;
+        let height_1 = 50;
+
+        println!(
+            "The area of the rectangle is {} square pixels",
+            area(width_1, height_1)
+        );
+
+        fn area(width: u32, height: u32) -> u32 {
+            return width * height;
+        }
+    }
+}
