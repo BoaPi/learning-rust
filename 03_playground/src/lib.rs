@@ -634,3 +634,13 @@ pub fn tuple_structs_lesson() {
         origin
     )
 }
+
+pub fn unit_like_structs() {
+    // declare a new unit like structs
+    #[derive(Debug)]
+    struct AlwaysEqual;
+
+    let subject = AlwaysEqual;
+
+    println!("Unit like Struct: {:?}", subject);
+}
