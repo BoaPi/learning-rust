@@ -654,13 +654,16 @@ pub fn rectangle_lesson() {
         let width_1 = 30;
         let height_1 = 50;
 
+        fn area(width: u32, height: u32) -> u32 {
+            return width * height;
+        }
+
         println!(
             "The area of the rectangle is {} square pixels",
             area(width_1, height_1)
         );
+    }
 
-        fn area(width: u32, height: u32) -> u32 {
-            return width * height;
         }
     }
 }
