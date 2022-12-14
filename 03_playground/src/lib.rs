@@ -664,6 +664,17 @@ pub fn rectangle_lesson() {
         );
     }
 
+    {
+        // refactor towards tuple
+        let rect_1 = (30, 50);
+
+        fn area(dimensions: (u32, u32)) -> u32 {
+            return dimensions.0 * dimensions.1;
         }
+
+        println!(
+            "The area of the rectangel is {} square pixels",
+            area(rect_1)
+        )
     }
 }
