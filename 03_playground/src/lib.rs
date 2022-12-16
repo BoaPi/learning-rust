@@ -673,7 +673,7 @@ pub fn rectangle_lesson() {
         }
 
         println!(
-            "The area of the rectangel is {} square pixels",
+            "The area of the rectangle is {} square pixels",
             area(rect_1)
         )
     }
