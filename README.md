@@ -127,6 +127,7 @@ repo which is used to learn rust
   because there is only one way to print them
 * for `structs`there are more possibilities to print them, therefore the
   `Display` can not be implemented by default
+* good way to print `structs` is to use the `Debug` trait
 
 ### String Types
 
