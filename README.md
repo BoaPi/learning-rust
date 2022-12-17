@@ -422,6 +422,9 @@ repo which is used to learn rust
   if this is not necessary the `stdout` can be wrapped in a `BufWriter`
   2. acquire a lock on `stdout`or `stderr` and use `writeln!` to print directly
   this prevents the system from locking and unlocking the `stdout` all the time
+* `dbg!` macro can be used to print to the `stderr`
+* `dbg!` takes **ownership** of the expression and returns it afterwards
+* `dbg!` can also receive a reference `&`
 
 ## Testing
 
