@@ -701,4 +701,31 @@ pub fn rectangle_lesson() {
             area(&rect_1)
         );
     }
+
+    {
+        // refactor to use dbg! macro instead
+        #[derive(Debug)]
+        struct Rectangle {
+            width: u32,
+            height: u32,
+        }
+
+        fn area(rectangle: &Rectangle) -> u32 {
+            return rectangle.width * rectangle.height;
+        }
+
+        let scale: u32 = 2;
+        let rect_1 = Rectangle {
+            width: dbg!(30 * scale),
+            height: 50,
+        };
+
+        dbg!(&rect_1);
+
+        println!("Values of the rectangle {:#?}", rect_1);
+        println!(
+            "The area of the rectangle is {} square pixels",
+            area(&rect_1)
+        );
+    }
 }
