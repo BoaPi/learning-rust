@@ -695,7 +695,7 @@ pub fn rectangle_lesson() {
             height: 50,
         };
 
-        println!("Values of the rectangle {:?}", rect_1);
+        println!("Values of the rectangle {:#?}", rect_1);
         println!(
             "The area of the rectangle is {} square pixels",
             area(&rect_1)
