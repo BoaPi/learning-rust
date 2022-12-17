@@ -123,6 +123,10 @@ repo which is used to learn rust
 * **scalar** types are `integer`, `floating-point numbers`, `Booleans` and `characters`
 * rust has two **compound** types, `Tuple` and `Array`
 * **compound** types can hold multiple values
+* primitive types do implement `Display` trait by default,
+  because there is only one way to print them
+* for `structs`there are more possibilities to print them, therefore the
+  `Display` can not be implemented by default
 
 ### String Types
 
