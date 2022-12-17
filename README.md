@@ -15,6 +15,8 @@ repo which is used to learn rust
 * to make a variable mutable, the `mut` keyword needs to be used
 * `//` marks comments until end of line
 * `{}` inside `println!()` are placeholders for variables
+* `{}` means for the `println!()` macro to use formatting known as **Display**
+* **Display** means: output intended for end user consumption
 * constants are not allowed to change, they are always immutable
 * constants using the keyword `const`
 * the type of a constant have to be annotated
