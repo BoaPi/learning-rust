@@ -231,6 +231,18 @@ repo which is used to learn rust
 * `methods`are defined within in the context of a `struct`, `trait object` or `enum`
 * first parameter is always **self**
 * **self** represents the instance of the `struct` the methods is called on
+* `methods` are defined with the **impl** keyword
+* `methods` are called with the **dot notation**
+* `methods` can have same names as fields of a `struct`, usually this `methods`
+  return the value of the field and are called **getters**
+  **getters** will not be implemented automatically and are useful to create an
+  public API for the `struct`, thus they are read-only
+* `&self` in methods signature is short form for `self: &Self`
+* **self** can be:
+  * taken ownership of --> rare use case, usually if we want to prevent the
+    caller fro using the original instance after transformation
+  * borrow immutable --> to read data from the struct, but not write to it
+  * borrow mutable --> if we want to change the data of the instance
 
 ### Statement & Expressions
 
