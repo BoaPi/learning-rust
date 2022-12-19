@@ -226,6 +226,12 @@ repo which is used to learn rust
 * return value of a function is the same as the final expression of a function
 * returning earlies in a function needs the **return** keyword
 
+## Methods
+
+* `methods`are defined within in the context of a `struct`, `trait object` or `enum`
+* first parameter is always **self**
+* **self** represents the instance of the `struct` the methods is called on
+
 ### Statement & Expressions
 
 * **statements** are instructions, which do not return a value
