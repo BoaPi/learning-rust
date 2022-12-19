@@ -651,8 +651,8 @@ pub fn rectangle_lesson() {
     // towards using structs
     {
         // first version uses simple variables and no structs
-        let width_1 = 30;
-        let height_1 = 50;
+        let width = 30;
+        let height = 50;
 
         fn area(width: u32, height: u32) -> u32 {
             return width * height;
@@ -660,22 +660,19 @@ pub fn rectangle_lesson() {
 
         println!(
             "The area of the rectangle is {} square pixels",
-            area(width_1, height_1)
+            area(width, height)
         );
     }
 
     {
         // refactor towards tuple
-        let rect_1 = (30, 50);
+        let rect = (30, 50);
 
         fn area(dimensions: (u32, u32)) -> u32 {
             return dimensions.0 * dimensions.1;
         }
 
-        println!(
-            "The area of the rectangle is {} square pixels",
-            area(rect_1)
-        )
+        println!("The area of the rectangle is {} square pixels", area(rect))
     }
 
     {
@@ -690,16 +687,13 @@ pub fn rectangle_lesson() {
             return rectangle.width * rectangle.height;
         }
 
-        let rect_1 = Rectangle {
+        let rect = Rectangle {
             width: 30,
             height: 50,
         };
 
-        println!("Values of the rectangle {:#?}", rect_1);
-        println!(
-            "The area of the rectangle is {} square pixels",
-            area(&rect_1)
-        );
+        println!("Values of the rectangle {:#?}", rect);
+        println!("The area of the rectangle is {} square pixels", area(&rect));
     }
 
     {
@@ -715,14 +709,16 @@ pub fn rectangle_lesson() {
         }
 
         let scale: u32 = 2;
-        let rect_1 = Rectangle {
+        let rect = Rectangle {
             width: dbg!(30 * scale),
             height: 50,
         };
 
-        dbg!(&rect_1);
+        dbg!(&rect);
 
-        println!("Values of the rectangle {:#?}", rect_1);
+        println!("Values of the rectangle {:#?}", rect);
+        println!("The area of the rectangle is {} square pixels", area(&rect));
+    }
         println!(
             "The area of the rectangle is {} square pixels",
             area(&rect_1)
