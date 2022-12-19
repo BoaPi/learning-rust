@@ -719,9 +719,32 @@ pub fn rectangle_lesson() {
         println!("Values of the rectangle {:#?}", rect);
         println!("The area of the rectangle is {} square pixels", area(&rect));
     }
+
+    {
+        // refactor to use method on struct
+        #[derive(Debug)]
+        struct Rectangle {
+            width: u32,
+            height: u32,
+        }
+
+        impl Rectangle {
+            fn area(&self) -> u32 {
+                return self.width * self.height;
+            }
+        }
+
+        let rect = Rectangle {
+            width: 30,
+            height: 50,
+        };
+
+        dbg!(&rect);
+
         println!(
-            "The area of the rectangle is {} square pixels",
-            area(&rect_1)
+            "The area of the rectangle is {:?}.
+            This was calculated via the method of the rectangle",
+            rect.area()
         );
     }
 }
