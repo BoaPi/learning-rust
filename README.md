@@ -243,6 +243,9 @@ repo which is used to learn rust
     caller fro using the original instance after transformation
   * borrow immutable --> to read data from the struct, but not write to it
   * borrow mutable --> if we want to change the data of the instance
+* **rust** has **automatic referencing and dereferencing** for `methods`,
+  this works because `methods` have a clear receiver --> **self**. This is either
+  `&self`, `&mut self` or `self`
 
 ### Statement & Expressions
 
