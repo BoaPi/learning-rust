@@ -729,6 +729,7 @@ pub fn rectangle_lesson() {
         }
 
         impl Rectangle {
+            // returns the size of the rectangle
             fn area(&self) -> u32 {
                 return self.width * self.height;
             }
