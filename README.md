@@ -232,6 +232,7 @@ repo which is used to learn rust
 * first parameter is always **self**
 * **self** represents the instance of the `struct` the methods is called on
 * `methods` are defined with the **impl** keyword
+* multiple **impl** blocks are possible
 * `methods` are called with the **dot notation**
 * `methods` can have same names as fields of a `struct`, usually this `methods`
   return the value of the field and are called **getters**
