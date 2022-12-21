@@ -729,6 +729,11 @@ pub fn rectangle_lesson() {
         }
 
         impl Rectangle {
+            // constructor
+            fn new(width: u32, height: u32) -> Self {
+                Self { width, height }
+            }
+
             // returns the size of the rectangle
             fn area(&self) -> u32 {
                 return self.width * self.height;
@@ -746,18 +751,9 @@ pub fn rectangle_lesson() {
             }
         }
 
-        let rect_1 = Rectangle {
-            width: 30,
-            height: 50,
-        };
-        let rect_2 = Rectangle {
-            width: 20,
-            height: 30,
-        };
-        let rect_3 = Rectangle {
-            width: 50,
-            height: 50,
-        };
+        let rect_1 = Rectangle::new(30, 50);
+        let rect_2 = Rectangle::new(20, 30);
+        let rect_3 = Rectangle::new(50, 50);
 
         dbg!(&rect_1, &rect_2, &rect_3);
 
