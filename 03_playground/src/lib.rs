@@ -735,8 +735,16 @@ pub fn rectangle_lesson() {
             }
         }
 
-        let rect = Rectangle {
+        let rect_1 = Rectangle {
             width: 30,
+            height: 50,
+        };
+        let rect_2 = Rectangle {
+            width: 20,
+            height: 30,
+        };
+        let rect_3 = Rectangle {
+            width: 50,
             height: 50,
         };
 
