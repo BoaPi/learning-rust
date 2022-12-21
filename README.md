@@ -247,6 +247,15 @@ repo which is used to learn rust
 * **rust** has **automatic referencing and dereferencing** for `methods`,
   this works because `methods` have a clear receiver --> **self**. This is either
   `&self`, `&mut self` or `self`
+* `functions` which are defined within in **impl** block are called **associated functions**,
+    because they are associated with the type
+* **associated functions** without the **self** parameter are also possible, they do **not**
+  need an instance of the type. For example `String::from`
+* **associated functions** without **self** parameter are **not** a `method`.
+  Usually used as constructor to create a new instance.
+* **associated functions** which construct uses **Self** as return type. The **Self**
+  is a alias for the type that appears in the **impl** block
+* **associated functions** are called with `::`
 
 ### Statement & Expressions
 
