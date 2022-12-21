@@ -733,6 +733,17 @@ pub fn rectangle_lesson() {
             fn area(&self) -> u32 {
                 return self.width * self.height;
             }
+
+            // compares a given rectangle with the own size
+            // and returns true if the passed rectangle would
+            // fit
+            fn can_hold(&self, rect: &Rectangle) -> bool {
+                if &self.area() > &rect.area() {
+                    return true;
+                }
+
+                return false;
+            }
         }
 
         let rect_1 = Rectangle {
@@ -748,12 +759,11 @@ pub fn rectangle_lesson() {
             height: 50,
         };
 
-        dbg!(&rect);
+        dbg!(&rect_1, &rect_2, &rect_3);
 
-        println!(
-            "The area of the rectangle is {:?}.
-            This was calculated via the method of the rectangle",
-            rect.area()
-        );
+        // compare rectangles
+        println!("Can rect_1 hold recct_2: {:?}", rect_1.can_hold(&rect_2));
+        println!("Can rect_1 hold recct_3: {:?}", rect_1.can_hold(&rect_3));
+        println!("Can rect_2 hold recct_3: {:?}", rect_2.can_hold(&rect_3));
     }
 }
