@@ -429,7 +429,7 @@ repo which is used to learn rust
   * when a value should be owned, where it is only needed to know that
   a certain trait is implemented, rahter than a specific type
 
-### Enumerations
+### Enumerations / enums
 
 * is used to define a type by enumerating over its possible variants
 * is used to encode meaning with data
