@@ -435,11 +435,12 @@ repo which is used to learn rust
 * is used to encode meaning with data
 * it is possible to attach data to an `enum` directly, without using a `struct`
 * each variant of an `enum` becomes a function to construct an instance of the `enum`
-* when assigning data directly eo an `enum`, it is also possible that the variants can have
+* when assigning data directly to an `enum`, it is also possible that the variants can have
   different types and associated data
 * with `impl` it is possible to define `methods` on enums
 * `enums` with different typed variants are better suited to pass into a function, than 
   the same amount of different `structs`
+* it is possible to define functions that take in any variant of en `enum`
 
 ### Output - Debugging & Logging
 
