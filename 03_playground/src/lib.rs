@@ -763,3 +763,31 @@ pub fn rectangle_lesson() {
         println!("Can rect_2 hold recct_3: {:?}", rect_2.can_hold(&rect_3));
     }
 }
+
+pub fn enum_lesson() {
+    // all lessons related to enums
+    {
+        #[derive(Debug)]
+        enum IpAddrKind {
+            V4,
+            V6,
+        }
+
+        #[derive(Debug)]
+        struct IpAddr {
+            kind: IpAddrKind,
+            address: String,
+        }
+
+        let four = IpAddr {
+            kind: IpAddrKind::V4,
+            address: String::from("127.0.0.1"),
+        };
+        let six = IpAddr {
+            kind: IpAddrKind::V6,
+            address: String::from("::1"),
+        };
+
+        println!("{:?}\n{:?}", four, six);
+    }
+}
