@@ -809,6 +809,26 @@ pub fn enum_lesson() {
             V4(Ipv4Addr),
             V6(Ipv6Addr),
         }
+
+        let four = IpAddr::V4(Ipv4Addr {
+            address: (127, 0, 0, 1),
+        });
+
+        let six = IpAddr::V6(Ipv6Addr {
+            address: String::from("::0"),
+        });
+
         println!("{:?}\n{:?}", four, six);
+
+        // pattern matching the enum variants
+        match four {
+            IpAddr::V4(value) => println!("Ipv4 address: {:?}", value.address),
+            _ => println!("nothing"),
+        }
+
+        match six {
+            IpAddr::V6(value) => println!("Ipv6 address: {:?}", value.address),
+            _ => println!("nothing"),
+        }
     }
 }
