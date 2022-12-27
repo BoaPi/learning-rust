@@ -792,4 +792,23 @@ pub fn enum_lesson() {
         println!("{:?}\n{:?}", four.address, six.kind);
     }
 
+    {
+        // again ip addresses, but now as enums with structs
+        #[derive(Debug)]
+        struct Ipv4Addr {
+            address: (u8, u8, u8, u8),
+        }
+
+        #[derive(Debug)]
+        struct Ipv6Addr {
+            address: String,
+        }
+
+        #[derive(Debug)]
+        enum IpAddr {
+            V4(Ipv4Addr),
+            V6(Ipv6Addr),
+        }
+        println!("{:?}\n{:?}", four, six);
+    }
 }
