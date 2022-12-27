@@ -789,5 +789,7 @@ pub fn enum_lesson() {
         };
 
         println!("{:?}\n{:?}", four, six);
+        println!("{:?}\n{:?}", four.address, six.kind);
     }
+
 }
