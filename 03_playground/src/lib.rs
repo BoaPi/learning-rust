@@ -824,6 +824,11 @@ pub fn enum_lesson() {
         match four {
             IpAddr::V4(value) => println!("Ipv4 address: {:?}", value.address),
             _ => println!("nothing"),
+        fn print_ip_address(ip: IpAddr) {
+            match ip {
+                IpAddr::V4(value) => println!("Ipv4 address: {:?}", value.address),
+                IpAddr::V6(value) => println!("Ipv6 address: {:?}", value.address),
+            }
         }
 
         match six {
