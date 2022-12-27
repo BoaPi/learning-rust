@@ -820,10 +820,6 @@ pub fn enum_lesson() {
 
         println!("{:?}\n{:?}", four, six);
 
-        // pattern matching the enum variants
-        match four {
-            IpAddr::V4(value) => println!("Ipv4 address: {:?}", value.address),
-            _ => println!("nothing"),
         fn print_ip_address(ip: IpAddr) {
             match ip {
                 IpAddr::V4(value) => println!("Ipv4 address: {:?}", value.address),
@@ -831,9 +827,7 @@ pub fn enum_lesson() {
             }
         }
 
-        match six {
-            IpAddr::V6(value) => println!("Ipv6 address: {:?}", value.address),
-            _ => println!("nothing"),
-        }
+        print_ip_address(four);
+        print_ip_address(six);
     }
 }
