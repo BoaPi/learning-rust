@@ -830,4 +830,29 @@ pub fn enum_lesson() {
         print_ip_address(four);
         print_ip_address(six);
     }
+
+    {
+        // enum which contains a wide variety of types embedded
+        #[derive(Debug)]
+        enum Message {
+            Quit,
+            Move { x: u32, y: u32 },
+            Write(String),
+            ChangeColor(i32, i32, i32),
+        }
+
+        fn print_message(m: Message) {
+            match m {
+                Message::Quit => println!("User want to quit"),
+                Message::Move { x, y } => println!("Move x: {:?} and y: {:?}", x, y),
+                Message::Write(s) => println!("Anouncement: {s}"),
+                Message::ChangeColor(r, b, g) => println!("New RGB Colors: {r}, {b}, {g}!"),
+            }
+        }
+
+        print_message(Message::Quit);
+        print_message(Message::Move { x: 16, y: 45 });
+        print_message(Message::Write(String::from("HELLO ENUM!")));
+        print_message(Message::ChangeColor(255, 0, 254));
+    }
 }
