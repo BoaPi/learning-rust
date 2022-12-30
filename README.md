@@ -29,6 +29,7 @@ repo which is used to learn rust
 * after reassignment the variable is immutable again
 * **shadowing** can be used to change the type of a variable, to reuse the name
 * **rust** will never automatically do a **deep** copy
+* **rust** do **not** have a `Null` value
 
 ## Ownership
 
