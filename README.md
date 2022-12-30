@@ -446,6 +446,13 @@ repo which is used to learn rust
 * `enums` with different typed variants are better suited to pass into a function, than 
   the same amount of different `structs`
 * it is possible to define functions that take in any variant of an `enum`
+* `Option` is a enum for a very common scenario - the value could be something or nothing
+* `Option` will help to implement the concept of  `Null`
+* `Option` and the variants `Some` and `None` are always in scope
+* `Option` has a generic type parameter `<T>`
+* `<T>` can hold any type and is used by `Some`
+* to use the `Some` value of an `Option`, it needs to be converted to `<T>`, to do
+  that a common use case is to use `match` operator
 
 ### Output - Debugging & Logging
 
