@@ -841,6 +841,16 @@ pub fn enum_lesson() {
             ChangeColor(i32, i32, i32),
         }
 
+        impl Message {
+            fn call(&self) {
+                match self {
+                    Self::Quit => println!("User want to quit"),
+                    Self::Move { x, y } => println!("Move x: {:?} and y: {:?}", x, y),
+                    Self::Write(s) => println!("Anouncement: {s}"),
+                    Self::ChangeColor(r, b, g) => println!("New RGB Colors: {r}, {b}, {g}!"),
+                }
+            }
+        }
         fn print_message(m: Message) {
             match m {
                 Message::Quit => println!("User want to quit"),
