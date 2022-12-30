@@ -851,6 +851,7 @@ pub fn enum_lesson() {
                 }
             }
         }
+
         fn print_message(m: Message) {
             match m {
                 Message::Quit => println!("User want to quit"),
@@ -864,5 +865,15 @@ pub fn enum_lesson() {
         print_message(Message::Move { x: 16, y: 45 });
         print_message(Message::Write(String::from("HELLO ENUM!")));
         print_message(Message::ChangeColor(255, 0, 254));
+
+        let quit_msg = Message::Quit;
+        let move_msg = Message::Move { x: 16, y: 45 };
+        let write_msg = Message::Write(String::from("HELLO ENUM!"));
+        let change_color_msg = Message::ChangeColor(255, 0, 254);
+
+        quit_msg.call();
+        move_msg.call();
+        write_msg.call();
+        change_color_msg.call();
     }
 }
