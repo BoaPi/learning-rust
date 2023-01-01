@@ -877,3 +877,35 @@ pub fn enum_lesson() {
         change_color_msg.call();
     }
 }
+
+pub fn match_lesson() {
+    {
+        // coin matching
+        enum Coin {
+            Penny,
+            Nickel,
+            Dime,
+            Quarter,
+        }
+
+        fn value_of_coin(coin: Coin) -> u8 {
+            match coin {
+                Coin::Penny => 1,
+                Coin::Nickel => 5,
+                Coin::Dime => 10,
+                Coin::Quarter => 25,
+            }
+        }
+
+        println!("Value of a Penny Coin is: {:?}", value_of_coin(Coin::Penny));
+        println!(
+            "Value of a Nickel Coin is: {:?}",
+            value_of_coin(Coin::Nickel)
+        );
+        println!("Value of a Dime Coin is: {:?}", value_of_coin(Coin::Dime));
+        println!(
+            "Value of a Quarter Coin is: {:?}",
+            value_of_coin(Coin::Quarter)
+        );
+    }
+}
