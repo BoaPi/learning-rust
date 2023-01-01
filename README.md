@@ -273,6 +273,9 @@ repo which is used to learn rust
 * no automaatic conversion of types to **bool**
 * an **if expression** can be on the right site of a **let**, to the outcome to the variable
 * when using this approach, both arms of the **if expression** needs to be the same type
+* `match` can be used to compare values against a series of **pattern** and execute code based on it
+* **pattern** could be: literal values, variable names, wildcards and other things
+* 
 
 ### Loops & While
 
