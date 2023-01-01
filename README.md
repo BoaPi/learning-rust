@@ -275,7 +275,10 @@ repo which is used to learn rust
 * when using this approach, both arms of the **if expression** needs to be the same type
 * `match` can be used to compare values against a series of **pattern** and execute code based on it
 * **pattern** could be: literal values, variable names, wildcards and other things
-* 
+* **patterns** will be compared in order
+* code in one arm of a `match` is an expression and the result of that expression will be returned
+  for that `match` arm
+* multi-line expressions needs to go inside `{}`
 
 ### Loops & While
 
