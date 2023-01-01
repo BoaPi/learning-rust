@@ -2,6 +2,7 @@ use playground::*;
 
 // individual lesson are written in the lib.rs file
 fn main() {
+    match_lesson();
     enum_lesson();
     rectangle_lesson();
     unit_like_structs_lesson();
