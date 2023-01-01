@@ -888,7 +888,7 @@ pub fn match_lesson() {
             Quarter,
         }
 
-        fn value_of_coin(coin: Coin) -> u8 {
+        fn value_in_cents(coin: Coin) -> u8 {
             match coin {
                 Coin::Penny => 1,
                 Coin::Nickel => 5,
@@ -897,15 +897,18 @@ pub fn match_lesson() {
             }
         }
 
-        println!("Value of a Penny Coin is: {:?}", value_of_coin(Coin::Penny));
+        println!(
+            "Value of a Penny Coin is: {:?}",
+            value_in_cents(Coin::Penny)
+        );
         println!(
             "Value of a Nickel Coin is: {:?}",
-            value_of_coin(Coin::Nickel)
+            value_in_cents(Coin::Nickel)
         );
-        println!("Value of a Dime Coin is: {:?}", value_of_coin(Coin::Dime));
+        println!("Value of a Dime Coin is: {:?}", value_in_cents(Coin::Dime));
         println!(
             "Value of a Quarter Coin is: {:?}",
-            value_of_coin(Coin::Quarter)
+            value_in_cents(Coin::Quarter)
         );
     }
 }
