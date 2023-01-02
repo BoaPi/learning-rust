@@ -880,12 +880,18 @@ pub fn enum_lesson() {
 
 pub fn match_lesson() {
     {
+        #[derive(Debug)] // so we can inspect the state in a minute
+        enum UsState {
+            Alabama,
+            Alaska,
+            // --snip--
+        }
         // coin matching
         enum Coin {
             Penny,
             Nickel,
             Dime,
-            Quarter,
+            Quarter(UsState),
         }
 
         fn value_in_cents(coin: Coin) -> u8 {
@@ -893,7 +899,10 @@ pub fn match_lesson() {
                 Coin::Penny => 1,
                 Coin::Nickel => 5,
                 Coin::Dime => 10,
-                Coin::Quarter => 25,
+                Coin::Quarter(state) => {
+                    println!("State quarter from: {:?}", state);
+                    25
+                }
             }
         }
 
@@ -908,7 +917,11 @@ pub fn match_lesson() {
         println!("Value of a Dime Coin is: {:?}", value_in_cents(Coin::Dime));
         println!(
             "Value of a Quarter Coin is: {:?}",
-            value_in_cents(Coin::Quarter)
+            value_in_cents(Coin::Quarter(UsState::Alabama))
+        );
+        println!(
+            "Value of a Quarter Coin is: {:?}",
+            value_in_cents(Coin::Quarter(UsState::Alaska))
         );
     }
 }
