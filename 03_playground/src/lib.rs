@@ -924,4 +924,23 @@ pub fn match_lesson() {
             value_in_cents(Coin::Quarter(UsState::Alaska))
         );
     }
+
+    {
+        // match an Option<T> with a value and add 1 to the
+        // value if given. Than return that as a new Option<T>
+        // if no value given return None
+        fn plus_one(x: Option<i32>) -> Option<i32> {
+            match x {
+                None => None,
+                Some(i) => Some(i + 1),
+            }
+        }
+
+        // example of using new function
+        let five = Some(5);
+        let six = plus_one(five);
+        let none = plus_one(None);
+
+        println!("five: {:?}\nsix: {:?}\nnone: {:?}", five, six, none);
+    }
 }
