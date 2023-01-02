@@ -280,6 +280,7 @@ repo which is used to learn rust
   for that `match` arm
 * multi-line expressions needs to go inside `{}`
 * `match` pattern can bind to parts of the values that matches the pattern
+* **all** arms of a `match` needs to be compared
 
 ### Loops & While
 
