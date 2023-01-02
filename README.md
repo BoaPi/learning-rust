@@ -279,6 +279,7 @@ repo which is used to learn rust
 * code in one arm of a `match` is an expression and the result of that expression will be returned
   for that `match` arm
 * multi-line expressions needs to go inside `{}`
+* `match` pattern can bind to parts of the values that matches the pattern
 
 ### Loops & While
 
