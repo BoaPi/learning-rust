@@ -969,5 +969,15 @@ pub fn match_lesson() {
             7 => remove_fancy_hat(),
             _ => println!("something else"),
         }
+
+        // catch all with placeholder
+        // the values of the other pattern is not important and
+        // we do not want to do anything else. Only on 3s and 7s.
+        // by adding a unit tuple type
+        match dice_roll {
+            3 => add_fancy_hat(),
+            7 => remove_fancy_hat(),
+            _ => (),
+        }
     }
 }
