@@ -284,6 +284,9 @@ repo which is used to learn rust
 * in an `enum` the **catch-all** pattern needs to go last, otherwise the other arms
   are not possible to reach
 * **catch-all** could be a variable to catch the related value or `_` if the value is not important
+* when using `_` as catch all, it is possible to do nothing with a `unit tuple` 
+  `_ => ()`
+* a short hand for only matching one pattern and ignoring the rest, is the use of `if let` pattern
 
 ### Loops & While
 
