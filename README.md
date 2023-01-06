@@ -287,6 +287,7 @@ repo which is used to learn rust
 * when using `_` as catch all, it is possible to do nothing with a `unit tuple` 
   `_ => ()`
 * a short hand for only matching one pattern and ignoring the rest, is the use of `if let` pattern
+* an optional `else` block can be added to get the same functionality as with `_ => do_something()`
 
 ### Loops & While
 
