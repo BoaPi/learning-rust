@@ -960,5 +960,13 @@ pub fn match_lesson() {
             7 => remove_fancy_hat(),
             other => move_player(other),
         }
+
+        // catch all with placeholder
+        // the values of the other pattern is not important to us
+        match dice_roll {
+            3 => add_fancy_hat(),
+            7 => remove_fancy_hat(),
+            _ => println!("something else"),
+        }
     }
 }
