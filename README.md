@@ -281,6 +281,9 @@ repo which is used to learn rust
 * multi-line expressions needs to go inside `{}`
 * `match` pattern can bind to parts of the values that matches the pattern
 * **all** arms of a `match` needs to be compared
+* in an `enum` the **catch-all** pattern needs to go last, otherwise the other arms
+  are not possible to reach
+* **catch-all** could be a variable to catch the related value or `_` if the value is not important
 
 ### Loops & While
 
