@@ -943,4 +943,22 @@ pub fn match_lesson() {
 
         println!("five: {:?}\nsix: {:?}\nnone: {:?}", five, six, none);
     }
+
+    {
+        // enums with catch-all patterns and placeholder
+        let dice_roll: u8 = 9;
+
+        fn add_fancy_hat() {}
+        fn remove_fancy_hat() {}
+        fn move_player(_num_spaces: u8) {}
+
+        // catch all with variable "other"
+        // where "other" represents all other possibilities and
+        // we want to use them
+        match dice_roll {
+            3 => add_fancy_hat(),
+            7 => remove_fancy_hat(),
+            other => move_player(other),
+        }
+    }
 }
