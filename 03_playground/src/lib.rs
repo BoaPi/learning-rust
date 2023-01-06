@@ -963,6 +963,7 @@ pub fn match_lesson() {
 
         // catch all with placeholder
         // the values of the other pattern is not important to us
+        // but we want to act on those other pattern
         match dice_roll {
             3 => add_fancy_hat(),
             7 => remove_fancy_hat(),
