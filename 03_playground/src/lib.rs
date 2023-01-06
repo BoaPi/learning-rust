@@ -981,3 +981,22 @@ pub fn match_lesson() {
         }
     }
 }
+
+pub fn if_let_lesson() {
+    // some short circuit for match patterns
+    {
+        // match pattern, where only one is relevant
+        // boilerplate code to match only one pattern and ignore the rest
+        let config_max = Some(3u8);
+        match config_max {
+            Some(max) => println!("The maximum is configured to be: {}", max),
+            _ => (),
+        }
+
+        // same result with the if-let-pattern
+        // max binds to the value of Some and can be used in the if block
+        if let Some(max) = config_max {
+            println!("The maximum is configured to be: {}", max)
+        }
+    }
+}
