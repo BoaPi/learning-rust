@@ -31,6 +31,35 @@ repo which is used to learn rust
 * **rust** will never automatically do a **deep** copy
 * **rust** do **not** have a `Null` value
 
+## Managing growing projects
+
+* when growing: splitting functions into different **modules** and than multiple files
+* a packages can include
+  * an optional **library** crate
+  * multiple **binary** crates
+* when a crate get to big, it is possible to extract into own crates and become
+  external dependency
+* very large projects can use **workspaces** provided by **cargo**, to evolve
+  interrelated packages togehter
+* **rust** comes with a **module system** which provide:
+  * packages -> lets you build, test and share crates
+  * crates -> tree of modules that produces a library or executable
+  * modules & use -> let you control the organization, scope and privacy of paths
+  * paths -> a way of naming items, such as `structs`, `enums` or `modules`
+
+### Packages & Crates
+
+* an executable is a `binary crate`
+* an external one, is called `library crate`
+  * code is intended to used in other programs
+  * can't be executed on its own
+* external `library crates` are used to extend the functionality of the program
+* external `library crates` are managed in the `Cargo.toml` file of the project
+* **crates.io** is the site where **crates** gets published
+* `Cargo.lock` file is used to pin down every used version of a crate for the project
+* `Cargo.lock` ensures that every build is the same
+* `cargo update` can update dependencies
+
 ## Ownership
 
 * most unique feature of **rust*
@@ -333,19 +362,6 @@ repo which is used to learn rust
 
 * to obtain user input and write output we need the `io` standard lib
 * to use `io` it needs to be imported via `std:io`
-
-## Crates
-
-* an executable is a `binary crate`
-* an external one, is called `library crate`
-  * code is intended to used in other programs
-  * can't be executed on its own
-* external `library crates` are used to extend the functionality of the program
-* external `library crates` are managed in the `Cargo.toml` file of the project
-* **crates.io** is the site where **crates** gets published
-* `Cargo.lock` file is used to pin down every used version of a crate for the project
-* `Cargo.lock` ensures that every build is the same
-* `cargo update` can update dependencies
 
 ### Heap & Stack
 
