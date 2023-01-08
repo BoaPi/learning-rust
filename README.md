@@ -46,6 +46,7 @@ repo which is used to learn rust
   * crates -> tree of modules that produces a library or executable
   * modules & use -> let you control the organization, scope and privacy of paths
   * paths -> a way of naming items, such as `structs`, `enums` or `modules`
+* **crates.io** is the site where **crates** gets published
 
 ### Packages & Crates
 
@@ -55,10 +56,16 @@ repo which is used to learn rust
   * can't be executed on its own
 * external `library crates` are used to extend the functionality of the program
 * external `library crates` are managed in the `Cargo.toml` file of the project
-* **crates.io** is the site where **crates** gets published
+* `Cargo.toml` describes how to build the **crate**
+* `Cargo.toml` is the entry file for a package
 * `Cargo.lock` file is used to pin down every used version of a crate for the project
 * `Cargo.lock` ensures that every build is the same
 * `cargo update` can update dependencies
+* **package** is a bundle of one or more crates
+* `library crates` usually are get called only **crates**
+* **crates** provide a set of functionality
+* `src/main.rs` is the **crate root** of a **binary crate**
+* `src/lib.rs` is the **library crate**
 
 ## Ownership
 
